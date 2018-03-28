@@ -12,9 +12,9 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="format-detection" content="telephone=no">
 
-		<link rel="stylesheet" href="/master/Public/plugins/layui/css/layui.css" media="all" />
-		<link rel="stylesheet" href="/master/Public/css/global.css" media="all">
-		<link rel="stylesheet" href="/master/Public/plugins/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/crss/Public/plugins/layui/css/layui.css" media="all" />
+		<link rel="stylesheet" href="/crss/Public/css/global.css" media="all">
+		<link rel="stylesheet" href="/crss/Public/plugins/font-awesome/css/font-awesome.min.css">
 
 	</head>
 
@@ -22,16 +22,13 @@
 		<div class="layui-layout layui-layout-admin">
 			<div class="layui-header header header-demo">
 				<div class="layui-main">
-					<a class="logo" style="left: 0;" href="http://beginner.zhengjinfan.cn/demo/beginner_admin/">
-						<span style="font-size: 22px;">后台管理</span>
+					<a class="logo" style="left: 0;" href="#">
+						<span style="font-size: 22px;">课堂在线考勤系统</span>
 					</a>
 					<ul class="layui-nav">
-						<li class="layui-nav-item">
+						<!-- <li class="layui-nav-item">
 							<a href="javascript:;">清除缓存</a>
-						</li>
-						<li class="layui-nav-item">
-							<a href="#" target="_blank">浏览网站</a>
-						</li>
+						</li> -->
 						<li class="layui-nav-item">
 							<a href="javascript:;" class="admin-header-user">
 							
@@ -99,7 +96,7 @@
 				<i class="layui-icon">&#xe602;</i>
 			</div>
 			<div class="site-mobile-shade"></div>
-			<script type="text/javascript" src="/master/Public/plugins/layui/layui.js"></script>
+			<script type="text/javascript" src="/crss/Public/plugins/layui/layui.js"></script>
 			<script>
 				layui.use(['element', 'layer'], function() {
 					var element = layui.element(),

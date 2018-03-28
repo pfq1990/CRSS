@@ -5,15 +5,15 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-		<title>善跑赛事系统后台登录</title>
-		<link rel="stylesheet" href="/master/Public/plugins/layui/css/layui.css" media="all" />
-		<link rel="stylesheet" href="/master/Public/css/login.css" />
+		<title>课堂在线考勤系统登录</title>
+		<link rel="stylesheet" href="/crss/Public/plugins/layui/css/layui.css" media="all" />
+		<link rel="stylesheet" href="/crss/Public/css/login.css" />
 	</head>
 
 	<body class="beg-login-bg">
 		<div class="beg-login-box">
 			<header>
-				<h1>善跑赛事系统后台登录</h1>
+				<h1>课堂在线考勤系统登录</h1>
 			</header>
 			<div class="beg-login-main">
 				<form class="layui-form">
@@ -46,7 +46,7 @@
 				</form>
 			</div>
 		</div>
-		<script type="text/javascript" src="/master/Public/plugins/layui/layui.js"></script>
+		<script type="text/javascript" src="/crss/Public/plugins/layui/layui.js"></script>
 		<script>
 			layui.use(['layer'], function() {
 				var layer = layui.layer,

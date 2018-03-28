@@ -4,9 +4,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>菜单管理</title>
-		<link rel="stylesheet" href="/master/Public/plugins/layui/css/layui.css" media="all" />
-		<link rel="stylesheet" href="/master/Public/css/global.css" media="all">
-		<link rel="stylesheet" href="/master/Public/plugins/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/crss/Public/plugins/layui/css/layui.css" media="all" />
+		<link rel="stylesheet" href="/crss/Public/css/global.css" media="all">
+		<link rel="stylesheet" href="/crss/Public/plugins/font-awesome/css/font-awesome.min.css">
 	</head>
 
 	<body>
@@ -60,7 +60,7 @@
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript" src="/master/Public/plugins/layui/layui.js"></script>
+		<script type="text/javascript" src="/crss/Public/plugins/layui/layui.js"></script>
 		<script>
 			layui.use(['laypage','layer','form'], function() {
 				var laypage = layui.laypage,

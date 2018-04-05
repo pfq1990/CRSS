@@ -4,7 +4,7 @@
     <div class="layui-input-inline">
       <input type="text" name="menuicon" value="<?php echo ($menu_info["icon"]); ?>" <?php if($menu_info['pid']): ?>lay-verify="required"<?php endif; ?> placeholder="请输入菜单图标" autocomplete="off" class="layui-input">
     </div>
-     <div class="layui-form-mid layui-word-aux">具体参考layui官网</div>
+     <!--<div class="layui-form-mid layui-word-aux">具体参考layui官网</div>-->
   </div>
   <div class="layui-form-item">
     <label class="layui-form-label">菜单名称</label>

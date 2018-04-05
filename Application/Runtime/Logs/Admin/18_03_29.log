@@ -1,0 +1,1711 @@
+[ 2018-03-29T21:44:16+08:00 ] ::1 /crss/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.012001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0480s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.164066s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.164066s ]
+
+[ 2018-03-29T21:44:18+08:00 ] ::1 /crss/index.php/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Login/login' AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.059060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.059060s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.022002s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.022002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007000s ]
+
+[ 2018-03-29T21:44:19+08:00 ] ::1 /crss/index.php/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Login/verify' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.084062s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.084062s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2018-03-29T21:44:36+08:00 ] ::1 /crss/index.php/Login/doLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Login/doLogin' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.062061s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.062061s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `admin_user` WHERE `user_name` = 'admin' AND `password` = '21232f297a57a5a743894a0e4a801fc3' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2018-03-29T21:44:38+08:00 ] ::1 /crss/index.php/Login/verify.html?0.1826046076074661
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.012001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012001s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Login/verify' AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.085062s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.085062s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-03-29T21:44:49+08:00 ] ::1 /crss/index.php/Login/doLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Login/doLogin' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.067061s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.068061s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `admin_user` WHERE `user_name` = 'admin' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: UPDATE `admin_user` SET `lastlogin_time`='1522331089' WHERE `id` = 15 [ RunTime:0.0510s ]
+
+[ 2018-03-29T21:44:50+08:00 ] ::1 /crss/index.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.074062s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.074062s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0580s ]
+SQL: SELECT b.rules FROM admin_auth_group_access a LEFT JOIN admin_auth_group b ON b.id=a.group_id  WHERE a.uid = '15'  [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `is_menu` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.075004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.075004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-03-29T21:44:52+08:00 ] ::1 /crss/index.php/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/main' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.079062s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.079062s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-03-29T21:44:56+08:00 ] ::1 /crss/index.php/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'User/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.073061s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.073061s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0170s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0150s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0170s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_user` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_user` WHERE `status` = 1 LIMIT 0,10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-03-29T21:45:23+08:00 ] ::1 /crss/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.054060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.054060s ]
+
+[ 2018-03-29T21:52:26+08:00 ] ::1 /crss/index.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.076062s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.077062s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0170s ]
+SQL: SELECT b.rules FROM admin_auth_group_access a LEFT JOIN admin_auth_group b ON b.id=a.group_id  WHERE a.uid = '15'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `is_menu` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004001s ]
+
+[ 2018-03-29T21:52:27+08:00 ] ::1 /crss/index.php/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/main' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.121064s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.121064s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.005001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-03-29T21:52:31+08:00 ] ::1 /crss/index.php/Menu/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Menu/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.072061s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.072061s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0160s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0150s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `status` = 1 AND `is_menu` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 1 D:\phpStudy\PHPTutorial\WWW\CRSS\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 40 行.
+NOTIC: [8] Undefined offset: 1 D:\phpStudy\PHPTutorial\WWW\CRSS\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 40 行.
+NOTIC: [8] Undefined variable: page D:\phpStudy\PHPTutorial\WWW\CRSS\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 59 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-03-29T21:52:33+08:00 ] ::1 /crss/index.php/AuthGroup/authGroupList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'AuthGroup/authGroupList' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.071061s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.071061s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0140s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0130s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group` [ RunTime:0.0150s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_auth_group` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_auth_group` WHERE `status` = 1 ORDER BY is_manage DESC,id DESC LIMIT 0,15   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-03-29T21:52:35+08:00 ] ::1 /crss/index.php/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'User/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.054060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.054060s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0140s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_user` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_user` WHERE `status` = 1 LIMIT 0,10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-03-29T22:40:28+08:00 ] ::1 /crss/index.php/User/editUser.html?user_id=16
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0250s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'User/editUser' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.076062s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.077062s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0230s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0200s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `admin_user` WHERE `id` = 16 AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-03-29T22:59:26+08:00 ] ::1 /crss/index.php/User/addUser.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.009001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010001s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'User/addUser' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.064061s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.064061s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0160s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0130s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0160s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.111007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.111007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-03-29T23:06:10+08:00 ] ::1 /crss/index.php/AuthGroup/ruleGroup/role_id/29.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'AuthGroup/ruleGroup' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.052060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.053060s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0140s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_auth_group` WHERE `id` = 29 AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-03-29T23:06:21+08:00 ] ::1 /crss/index.php/AuthGroup/ruleGroup/role_id/29.html?menu%5B2%5D=2&role_id=29
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'AuthGroup/ruleGroup' AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.056060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.056060s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0140s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0150s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_auth_group` WHERE `id` = 29 AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-03-29T23:06:24+08:00 ] ::1 /crss/index.php/AuthGroup/ruleGroup/role_id/29.html?menu%5B2%5D=2&role_id=29
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'AuthGroup/ruleGroup' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.055060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.055060s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0130s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0130s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `status` = 1  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `admin_auth_group` WHERE `id` = 29 AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-03-29T23:06:35+08:00 ] ::1 /crss/index.php/AuthGroup/authGroupList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'AuthGroup/authGroupList' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.054060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.054060s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0130s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0130s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group` [ RunTime:0.0150s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_auth_group` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `admin_auth_group` WHERE `status` = 1 ORDER BY is_manage DESC,id DESC LIMIT 0,15   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2018-03-29T23:07:25+08:00 ] ::1 /crss/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.058060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.059060s ]
+
+[ 2018-03-29T23:17:41+08:00 ] ::1 /crss/index.php/AuthGroup/editGroup.html?id=29
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'AuthGroup/editGroup' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.065061s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.065061s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0160s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `admin_auth_group` WHERE `id` = 29 AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2018-03-29T23:17:46+08:00 ] ::1 /crss/index.php/AuthGroup/ruleGroup/role_id/29.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'AuthGroup/ruleGroup' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.055060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.055060s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0130s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `admin_auth_group` WHERE `id` = 29 AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2018-03-29T23:17:50+08:00 ] ::1 /crss/index.php/AuthGroup/ruleGroup/role_id/29.html?menu%5B2%5D=2&role_id=29
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'AuthGroup/ruleGroup' AND `status` = 1 LIMIT 1   [ RunTime:0.0030s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.109063s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.109063s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0170s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0150s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_auth_group` WHERE `id` = 29 AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008001s ]
+
+[ 2018-03-29T23:17:51+08:00 ] ::1 /crss/index.php/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Login/verify' AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.069061s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.069061s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-03-29T23:18:04+08:00 ] ::1 /crss/index.php/Login/doLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Login/doLogin' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.061060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.062060s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `admin_user` WHERE `user_name` = 'admin' AND `password` = 'e10adc3949ba59abbe56e057f20f883e' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `admin_user` SET `lastlogin_time`='1522336684' WHERE `id` = 15 [ RunTime:0.0400s ]
+
+[ 2018-03-29T23:18:05+08:00 ] ::1 /crss/index.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.056060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.056060s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0140s ]
+SQL: SELECT b.rules FROM admin_auth_group_access a LEFT JOIN admin_auth_group b ON b.id=a.group_id  WHERE a.uid = '15'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `is_menu` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-03-29T23:18:07+08:00 ] ::1 /crss/index.php/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/main' AND `status` = 1 LIMIT 1   [ RunTime:0.0090s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.128064s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.128064s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-03-29T23:18:09+08:00 ] ::1 /crss/index.php/AuthGroup/authGroupList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'AuthGroup/authGroupList' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.073061s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.073061s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0130s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_auth_group` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `admin_auth_group` WHERE `status` = 1 ORDER BY is_manage DESC,id DESC LIMIT 0,15   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-03-29T23:18:13+08:00 ] ::1 /crss/index.php/AuthGroup/ruleGroup/role_id/29.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'AuthGroup/ruleGroup' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.054060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.054060s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0130s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0130s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_auth_group` WHERE `id` = 29 AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-03-29T23:18:22+08:00 ] ::1 /crss/index.php/User/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'User/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.061060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.061060s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0130s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0130s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_user` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `admin_user` WHERE `status` = 1 LIMIT 0,10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-03-29T23:18:27+08:00 ] ::1 /crss/index.php/AuthGroup/giveRole.html?user_id=15
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'AuthGroup/giveRole' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.054060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.054060s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0140s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0150s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_auth_group` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.uid FROM admin_auth_group a LEFT JOIN admin_auth_group_access b ON a.id=b.group_id AND b.uid=15  WHERE a.status = 1 ORDER BY a.is_manage DESC,a.id DESC  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-03-29T23:18:34+08:00 ] ::1 /crss/index.php/Menu/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Menu/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.048060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.049060s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0140s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0130s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `status` = 1 AND `is_menu` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 1 D:\phpStudy\PHPTutorial\WWW\CRSS\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 40 行.
+NOTIC: [8] Undefined offset: 1 D:\phpStudy\PHPTutorial\WWW\CRSS\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 40 行.
+NOTIC: [8] Undefined variable: page D:\phpStudy\PHPTutorial\WWW\CRSS\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 59 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-03-29T23:21:46+08:00 ] ::1 /crss/index.php/AuthGroup/giveRole.html?user_id=15
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'AuthGroup/giveRole' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.049060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.049060s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0130s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0130s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_auth_group` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.uid FROM admin_auth_group a LEFT JOIN admin_auth_group_access b ON a.id=b.group_id AND b.uid=15  WHERE a.status = 1 ORDER BY a.is_manage DESC,a.id DESC  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-03-29T23:22:19+08:00 ] ::1 /crss/index.php/AuthGroup/giveRole.html?user_id=15
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'AuthGroup/giveRole' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.055060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.055060s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0140s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_auth_group` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT a.*,b.uid FROM admin_auth_group a LEFT JOIN admin_auth_group_access b ON a.id=b.group_id AND b.uid=15  WHERE a.status = 1 ORDER BY a.is_manage DESC,a.id DESC  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-03-29T23:25:34+08:00 ] ::1 /crss/index.php/AuthGroup/authGroupList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'AuthGroup/authGroupList' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.057060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.057060s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0140s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group` [ RunTime:0.0150s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_auth_group` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `admin_auth_group` WHERE `status` = 1 ORDER BY is_manage DESC,id DESC LIMIT 0,15   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-03-29T23:25:38+08:00 ] ::1 /crss/index.php/AuthGroup/addGroup.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'AuthGroup/addGroup' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.048060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.048060s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0140s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-03-29T23:26:39+08:00 ] ::1 /crss/index.php/AuthGroup/editGroup.html?id=29
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'AuthGroup/editGroup' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.047060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.048060s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0140s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `admin_auth_group` WHERE `id` = 29 AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-03-29T23:30:23+08:00 ] ::1 /crss/index.php/AuthGroup/ruleGroup/role_id/29.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'AuthGroup/ruleGroup' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.077061s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.077061s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0140s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0130s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_auth_group` WHERE `id` = 29 AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-03-29T23:37:21+08:00 ] ::1 /crss/index.php/Menu/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Menu/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.056061s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.056061s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0140s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `status` = 1 AND `is_menu` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined offset: 1 D:\phpStudy\PHPTutorial\WWW\CRSS\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 40 行.
+NOTIC: [8] Undefined offset: 1 D:\phpStudy\PHPTutorial\WWW\CRSS\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 40 行.
+NOTIC: [8] Undefined variable: page D:\phpStudy\PHPTutorial\WWW\CRSS\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 59 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-03-29T23:37:27+08:00 ] ::1 /crss/index.php/Menu/viewOpt.html?id=21
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Menu/viewOpt' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.045060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.045060s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0140s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `pid` = 21 AND `status` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-03-29T23:42:17+08:00 ] ::1 /crss/index.php/Menu/addMenu.html?id=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Menu/addMenu' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.053061s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.053061s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0150s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0130s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.063003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.063003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-03-29T23:43:44+08:00 ] ::1 /crss/index.php/Menu/addMenu.html?id=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Menu/addMenu' AND `status` = 1 LIMIT 1   [ RunTime:0.0020s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.057060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.057060s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0140s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2018-03-29T23:44:26+08:00 ] ::1 /crss/index.php/Menu/addMenu.html?id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Menu/addMenu' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.049060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.049060s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0130s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0130s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-03-29T23:44:31+08:00 ] ::1 /crss/index.php/Menu/viewOpt.html?id=21
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Menu/viewOpt' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.055061s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.055061s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0130s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `pid` = 21 AND `status` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-03-29T23:47:46+08:00 ] ::1 /crss/index.php/Menu/viewOpt.html?id=23
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Menu/viewOpt' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.058061s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.058061s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0140s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0160s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `pid` = 23 AND `status` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2018-03-29T23:47:56+08:00 ] ::1 /crss/index.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.062061s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.062061s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0160s ]
+SQL: SELECT b.rules FROM admin_auth_group_access a LEFT JOIN admin_auth_group b ON b.id=a.group_id  WHERE a.uid = '15'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `is_menu` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-03-29T23:47:58+08:00 ] ::1 /crss/index.php/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/main' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.096062s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.096062s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-03-29T23:48:00+08:00 ] ::1 /crss/index.php/AuthGroup/authGroupList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'AuthGroup/authGroupList' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.051060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.051060s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0140s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group` [ RunTime:0.0150s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_auth_group` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_auth_group` WHERE `status` = 1 ORDER BY is_manage DESC,id DESC LIMIT 0,15   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-03-29T23:48:02+08:00 ] ::1 /crss/index.php/Menu/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Menu/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.079062s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.090062s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0130s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `status` = 1 AND `is_menu` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 1 D:\phpStudy\PHPTutorial\WWW\CRSS\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 40 行.
+NOTIC: [8] Undefined offset: 1 D:\phpStudy\PHPTutorial\WWW\CRSS\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 40 行.
+NOTIC: [8] Undefined variable: page D:\phpStudy\PHPTutorial\WWW\CRSS\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 59 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-03-29T23:48:04+08:00 ] ::1 /crss/index.php/Menu/viewOpt.html?id=21
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Menu/viewOpt' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.054060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.054060s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0160s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0190s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `pid` = 21 AND `status` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-03-29T23:53:36+08:00 ] ::1 /crss/index.php/Menu/viewOpt.html?id=21
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Menu/viewOpt' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.060061s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.060061s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0130s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0130s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `pid` = 21 AND `status` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-03-29T23:53:45+08:00 ] ::1 /crss/index.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0060s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.071062s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.071062s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0180s ]
+SQL: SELECT b.rules FROM admin_auth_group_access a LEFT JOIN admin_auth_group b ON b.id=a.group_id  WHERE a.uid = '15'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0230s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `is_menu` = 1 AND `status` = 1  [ RunTime:0.0040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004000s ]
+
+[ 2018-03-29T23:53:46+08:00 ] ::1 /crss/index.php/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Index/main' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.073061s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.073061s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-03-29T23:53:48+08:00 ] ::1 /crss/index.php/Menu/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Menu/index' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.054060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.054060s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0200s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0150s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `status` = 1 AND `is_menu` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined offset: 1 D:\phpStudy\PHPTutorial\WWW\CRSS\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 40 行.
+NOTIC: [8] Undefined offset: 1 D:\phpStudy\PHPTutorial\WWW\CRSS\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 40 行.
+NOTIC: [8] Undefined variable: page D:\phpStudy\PHPTutorial\WWW\CRSS\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 59 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-03-29T23:53:50+08:00 ] ::1 /crss/index.php/Menu/viewOpt.html?id=21
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Menu/viewOpt' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.054061s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.054061s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0130s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `pid` = 21 AND `status` = 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-03-29T23:54:45+08:00 ] ::1 /crss/index.php/Menu/editMenu.html?id=21
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Menu/editMenu' AND `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.047060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.047060s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0140s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0150s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2018-03-29T23:54:49+08:00 ] ::1 /crss/index.php/Menu/editMenu.html?id=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Menu/editMenu' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.064061s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.064061s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0130s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined offset: 1 D:\phpStudy\PHPTutorial\WWW\CRSS\Application\Runtime\Cache\Admin\7d03934630280821b77e8ee5c59ebf41.php 第 26 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2018-03-29T23:54:55+08:00 ] ::1 /crss/index.php/Menu/editMenu.html?id=14
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Menu/editMenu' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.057060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.057060s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0120s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `id` = 14 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined offset: 1 D:\phpStudy\PHPTutorial\WWW\CRSS\Application\Runtime\Cache\Admin\7d03934630280821b77e8ee5c59ebf41.php 第 26 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2018-03-29T23:54:59+08:00 ] ::1 /crss/index.php/Menu/editMenu.html?id=21
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `menu_name` = 'Menu/editMenu' AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Admin\Behaviors\OptionRecordBehavior [ RunTime:1.038060s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.038060s ]
+SQL: SHOW COLUMNS FROM `admin_auth_group_access` [ RunTime:0.0140s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM admin_auth_group_access a INNER JOIN admin_auth_group g on a.group_id=g.id  WHERE ( a.uid='15' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `admin_auth_rule` [ RunTime:0.0130s ]
+SQL: SELECT `condition`,`menu_name` FROM `admin_auth_rule` WHERE `id` IN ('2','14','21','24','25','26','27','22','28','29','30','31','23','32','33','34','35') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `admin_auth_rule` WHERE `id` = 21 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+

@@ -33,7 +33,7 @@
 				  <div class="layui-form-item">
 				    <div class="layui-input-block">
 				      <button class="layui-btn" lay-submit lay-filter="auth">立即提交</button>
-				      <button class="layui-btn layui-btn-primary" onclick="window.history.back(-1)" >返回</button>
+				      <button class="layui-btn layui-btn-primary" onclick="window.history.back()" >返回</button>
 				    </div>
 				  </div>
 				  <input type="hidden" name="role_id" value="<?php echo ($role_id); ?>">

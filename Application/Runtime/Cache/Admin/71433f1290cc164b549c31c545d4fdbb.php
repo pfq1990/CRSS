@@ -33,7 +33,8 @@
 				  <div class="layui-form-item">
 				    <div class="layui-input-block">
 				      <button class="layui-btn" lay-submit lay-filter="auth">立即提交</button>
-				      <button class="layui-btn layui-btn-primary" onclick="window.history.back(-1)" >返回</button>
+				      <button class="layui-btn layui-btn-primary back_list " onclick="return false" >
+					  <i class="layui-icon">&#xe603;</i>&nbsp;&nbsp;返回</button>
 				    </div>
 				  </div>
 				  <input type="hidden" name="role_id" value="<?php echo ($role_id); ?>">
@@ -91,6 +92,11 @@
 						})
 					    return false;//阻止表单跳转
 					  });
+					  
+					  //返回
+					  $('.back_list').click(function(){
+						window.location.href="<?php echo U('AuthGroup/authGroupList');?>";
+					})
 				
 			});
 		</script>

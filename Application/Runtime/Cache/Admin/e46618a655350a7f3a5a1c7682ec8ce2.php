@@ -1,12 +1,17 @@
 <?php if (!defined('THINK_PATH')) exit();?><form class="layui-form">
   <div class="layui-form-item">
-    <label class="layui-form-label">角色名称</label>
+    <label class="layui-form-label">用户名</label>
     <div class="layui-input-inline">
-      <input type="text" name="title" value="<?php echo ($group_info["title"]); ?>" lay-verify="required" placeholder="请输入角色名称" autocomplete="off"  id="title" class="layui-input">
-    	<input type="hidden" name="id" value="<?php echo ($group_info["id"]); ?>" />
+      <input type="text" name="user_name" lay-verify="required" placeholder="请输入用户名" id="name" value="<?php echo ($user_info["user_name"]); ?>"class="layui-input">
     </div>
   </div>
-
+  <div class="layui-form-item">
+    <label class="layui-form-label">登录密码</label>
+    <div class="layui-input-inline">
+      <input type="password" name="password" placeholder="请输入密码" value='' id="pwd" class="layui-input">
+    </div>
+  </div>
+  <input type="hidden" value="<?php echo ($user_info["id"]); ?>" name="id">
   <div class="layui-form-item">
     <div class="layui-input-block">
       <button class="layui-btn" lay-submit lay-filter="user">立即提交</button>
@@ -16,21 +21,17 @@
 </form>
 <script>
 layui.use('form', function(){
-	
 	var form = layui.form(),
    		 $ = layui.jquery
-   	$("button[type=reset]").click();
 	  //监听提交
 	  form.on('submit(user)', function(data){
-		  
-	    var groupInfo = data.field;
-	    
-		var url = "<?php echo U('AuthGroup/editGroup');?>";
-		$.post(url,groupInfo,function(data){
-			if(data.status=='error'){
+	    var userInfo = data.field;
+		var url = "<?php echo U('User/editUser');?>";
+		$.post(url,userInfo,function(data){
+			if(data.status == 'error'){
 				  layer.msg(data.msg,{icon: 5});//失败的表情
 				  return;
-			  }else{
+			  }else if(data.status == 'success'){
 				  layer.msg(data.msg, {
 					  icon: 6,//成功的表情
 					  time: 2000 //2秒关闭（如果不配置，默认是3秒）

@@ -34,7 +34,7 @@
 					      <td><?php echo ($key+1); ?></td>
 					      <td><?php echo ($v["title"]); ?></td>
 					      <td><a href="<?php echo U('AuthGroup/ruleGroup',array('role_id' => $v['id']));?>" class="layui-btn layui-btn-mini rule">查看</a>
-</td>
+					      </td>
 					      <td>
 					      	<a href="<?php echo U('AuthGroup/ruleGroup',array('role_id' => $v['id']));?>" class="layui-btn layui-btn-mini rule"><i class="layui-icon">&#xe608;</i>分配权限</a>
 							<a data="<?php echo ($v["id"]); ?>" class="layui-btn layui-btn-mini layui-btn-normal edit"><i class="layui-icon">&#xe642;</i>编辑</a>
@@ -94,7 +94,6 @@
 						});
 					})
 				 });
-				
 				
 				//删除
 				$('.del').click(function(){

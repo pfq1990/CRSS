@@ -74,6 +74,7 @@ class AdminUserModel extends BaseModel
      * @description:更新用户信息
      * @author wuyanwen(2016年12月1日)
      * @param unknown $data
+     * @return Ambigous <boolean, unknown>
      */
     public function editAdminUser($data)
     {
@@ -110,6 +111,7 @@ class AdminUserModel extends BaseModel
      * @description:根据id查询用户
      * @author wuyanwen(2016年12月1日)
      * @param unknown $user_id
+     * @return data
      */
     public function findAdminUserById($user_id)
     {

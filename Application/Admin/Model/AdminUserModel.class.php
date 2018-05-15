@@ -21,7 +21,27 @@ class AdminUserModel extends BaseModel
         
         return $result;
     }
-    
+
+    /**
+     * @description:查询用户 for 客户端
+     * @param $name
+     * @param $pwd
+     * @return mixed
+     * @author pfq1990(2018年05月15日）
+     */
+    public function findUserForClinet($name,$pwd)
+    {
+        $where = array(
+            'user_name' => $name,
+            'password' => $pwd,
+            'status'   => parent::NORMAL_STATUS,
+        );
+
+        $result = $this->where($where)->find();
+
+        return $result;
+    }
+
     /**
      * 根据id更新用户登录时间
      * @author luduoliang <luduoliang@imohoo.com> (2016/12/01)

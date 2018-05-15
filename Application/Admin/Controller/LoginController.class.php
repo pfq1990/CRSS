@@ -48,7 +48,38 @@ class LoginController extends Controller {
         $this->ajaxReturn(array('status'=>0,'msg'=>'登录成功！'));
         
     }
-    
+
+
+    public function checkLoginClient()
+    {
+        $name = I('get.name');
+        $pwd = I('get.pwd');
+        $type=I('get.type');
+        if(!$name){
+            $this->ajaxReturn(array('status'=>1,'msg'=>'请输入用户名！'));
+        }
+        if(!$pwd){
+            $this->ajaxReturn(array('status'=>1,'msg'=>'请输入密码！'));
+        }
+        /* @var $admin_user_model \Admin\Model\AdminUserModel */
+        $admin_user_model = D("AdminUser");
+        $user_info = $admin_user_model->findUserForClinet($name,$pwd);
+        $admin_auth_group_access=D("AdminAuthGroupAccess");
+        if(!$user_info){
+            $this->ajaxReturn(array('status'=>1,'msg'=>'用户名或密码不正确，请重新输入！'));
+        }
+        $gid=0;
+        if($type==1){
+            $gid=29;
+        }else{
+            $gid=27;
+        }
+        $auth_info=$admin_auth_group_access->getUserGroup($user_info['id'],$gid);
+        if(!$auth_info){
+            $this->ajaxReturn(array('status'=>1,'msg'=>'该版本客户端不支持该角色用户！'));
+        }
+        $this->ajaxReturn(array('status'=>0,'msg'=>'登录成功！'));
+    }
     /**
      * 生成验证码
      * @author luduoliang <luduoliang@imohoo.com> (2016/12/01)

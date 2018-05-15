@@ -45,4 +45,15 @@ class AdminAuthGroupAccessModel extends BaseModel
         return $menus;
         
     }
+
+    public function getUserGroup($user_id,$group_id)
+    {
+        $where = array(
+            'uid' => $user_id,
+            'group_id'=>array('neq',$group_id),
+        );
+        $result = $this->where($where)->find();
+        return $result;
+    }
+
 }

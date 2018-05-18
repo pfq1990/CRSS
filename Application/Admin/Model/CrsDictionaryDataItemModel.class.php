@@ -14,7 +14,7 @@ class CrsDictionaryDataItemModel extends BaseModel
 
     protected $tableName="crs_dictionary_item";
 
-    public function getUserDictionaryList($id,$num){
+    public function getUserDictionaryList($id,$num=10){
         $where=array(
             'dictionary_id'=>$id,
         );

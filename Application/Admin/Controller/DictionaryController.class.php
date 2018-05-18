@@ -20,4 +20,14 @@ class DictionaryController extends CommonController
         $crs_dictionary_model=D('CrsDictionaryData');
         $this->crs_dictionary_model=$crs_dictionary_model;
     }
+
+    public function index(){
+        $user_info=session('user_info');
+        $dictionary=$this->crs_dictionary_model->getDictionaryDataList($user_info['id']);
+        $this->assign('page',$dictionary['page']);
+        $this->assign('list', $dictionary['list']);
+        $this->assign('default',$dictionary['default']);
+        $this->display();
+    }
+
 }

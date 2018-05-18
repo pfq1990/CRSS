@@ -86,7 +86,9 @@ class LoginController extends Controller {
         if(!$auth_info){
             $this->ajaxReturn(array('status'=>1,'msg'=>'该版本客户端不支持该角色用户！'));
         }
-        $this->ajaxReturn(array('status'=>0,'msg'=>'登录成功！'));
+        $admin_user_model->updateLoginTime($user_info['id']);
+        //session('user_info', $user_info);
+        $this->ajaxReturn(array('status'=>0,'msg'=>'登录成功！','data'=>$user_info));
     }
     /**
      * 生成验证码

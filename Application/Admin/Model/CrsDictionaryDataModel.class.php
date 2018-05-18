@@ -14,13 +14,13 @@ class CrsDictionaryDataModel extends BaseModel
 
     protected $tableName="crs_dictionary";
 
-    public function getDictionaryDataList($uid,$num){
+    public function getDictionaryDataList($uid,$num=10){
         $where=array(
             'user_id'=>$uid,
         );
         $data=$this->where($where)->find();
-        $list=D('CrsDictionaryDataItem')->getUserDictionaryList($data['id'],$data['value'],$num);
-        return array($list,'default'=>$data['value']);
+        $list=D('CrsDictionaryDataItem')->getUserDictionaryList($data['id'],$num);
+        return array('page'=>$list['page'],'list'=>$list['list'],'default'=>$data['value']);
     }
 
 }

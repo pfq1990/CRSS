@@ -12,7 +12,7 @@ class IndexController extends CommonController {
         $this->assign('menus', $menus);
         $this->display();
     }
-    
+
     public function nav()
     {
         $this->display();

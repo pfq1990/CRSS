@@ -14,31 +14,36 @@
 		
 			<blockquote class="layui-elem-quote">
 				<button  class="layui-btn layui-btn-small add">
-					<i class="layui-icon">&#xe608;</i> 添加用户
+					<i class="layui-icon">&#xe608;</i> 添加字典项
 				</button>
 			</blockquote>
 			<fieldset class="layui-elem-field">
-				<legend>用户列表</legend>
+				<legend>数据字典项列表</legend>
 				<div class="layui-field-box">
 				<table class="layui-table">
 					  <thead>
 					    <tr>
 					      <th>#</th>
-					      <th>用户名</th>
-					      <th>最近登录时间</th>
+					      <th>字典项值</th>
+					      <th>创建时间时间</th>
+                          <th>是否默认值</th>
 					      <th>操作</th>
 					    </tr> 
 					  </thead>
 					  <tbody>
-					  <foreach name="user_info" key="k" item="vo">
+					  <foreach name="list" key="k" item="vo">
 					    <tr>
 					      <td>{$k+1}</td>
-					      <td>{$vo.user_name}</td>
-					      <td>{$vo.lastlogin_time|date="Y-m-d H:i:s",###}</td>
+					      <td>{$vo.value}</td>
+					      <td>{$vo.create_time}</td>
+                            <td><if condition="$vo.id eq $default">是</if></td>
 					      <td>
 							<a data="{$vo.id}" class="layui-btn layui-btn-mini layui-btn-normal edit"><i class="layui-icon">&#xe642;</i>编辑</a>
 							<a  data="{$vo.id}" class="layui-btn layui-btn-danger layui-btn-mini del"><i class="layui-icon">&#xe640;</i>删除</a>
-					      	<a data="{$vo.id}" class="layui-btn layui-btn-mini role"><i class="layui-icon">&#xe608;</i>分配角色</a>
+                                  <if condition="$vo.id neq $default">
+                                      <a data="{$vo.id}" class="layui-btn layui-btn-mini role" ><i class="layui-icon">&#xe608;</i>设为默认值</a>
+
+                                  </if>
 					      </td>
 					    </tr>
 					    </foreach>
@@ -60,7 +65,7 @@
 					$ = layui.jquery
 					//请求表单
 				 $('.add').click(function(){
-					var url = "{:U('User/addUser')}";
+					var url = "{:U('Dictionary/addUser')}";
 					$.get(url,function(data){
 						if(data.status == 'error'){
 							layer.msg(data.msg,{icon: 5});
@@ -78,7 +83,7 @@
 				//编辑用户
 				$('.edit').click(function(){
 					var user_id = $(this).attr('data');
-					var url = "{:U('User/editUser')}";
+					var url = "{:U('Dictionary/editUser')}";
 					$.get(url,{user_id:user_id},function(data){
 						if(data.status == 'error'){
 							layer.msg(data.msg,{icon: 5});
@@ -94,10 +99,10 @@
 					})
 				 });
 				
-				//分配角色
+				//设为默认值
 				$('.role').click(function(){
 					var user_id = $(this).attr('data');
-					var url = "{:U('AuthGroup/giveRole')}";
+					var url = "{:U('Dictionary/giveRole')}";
 					$.get(url,{user_id:user_id},function(data){
 						if(data.status == 'error'){
 							layer.msg(data.msg,{icon: 5});

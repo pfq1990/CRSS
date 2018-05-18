@@ -52,9 +52,17 @@ class LoginController extends Controller {
 
     public function checkLoginClient()
     {
-        $name = I('get.name');
-        $pwd = I('get.pwd');
-        $type=I('get.type');
+        if(IS_POST){
+            $name = I('post.name');
+            $pwd = I('post.pwd');
+            $type=I('post.type');
+        }
+        else {
+            $name = I('get.name');
+            $pwd = I('get.pwd');
+            $type=I('get.type');
+        }
+
         if(!$name){
             $this->ajaxReturn(array('status'=>1,'msg'=>'请输入用户名！'));
         }

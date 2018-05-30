@@ -12,6 +12,9 @@ return array(
     'DB_USER'                       => 'root', // 用户名
     'DB_PWD'                        => '123456', // 密码 
 
+    'MODULE_ALLOW_LIST'    =>    array('Admin','Home'),
+    'DEFAULT_MODULE'       =>    'Home',
+
 	/**
 	//服务器database配置
 	'DB_HOST'                       => 'qdm174464367.my3w.com', // 服务器地址

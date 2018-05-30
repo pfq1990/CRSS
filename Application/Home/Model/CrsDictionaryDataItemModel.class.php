@@ -4,10 +4,12 @@
  * User: pfq1990
  * Date: 2018/5/8
  * Time: 21:07
+ * 数据字典项表
  */
 
-namespace Admin\Model;
+namespace Home\Model;
 
+use Admin\Model\BaseModel;
 
 class CrsDictionaryDataItemModel extends BaseModel
 {

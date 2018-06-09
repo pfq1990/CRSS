@@ -52,7 +52,7 @@ class AdminAuthGroupAccessModel extends BaseModel
             'uid' => $user_id,
             'group_id'=>array('neq',$group_id),
         );
-        $result = $this->where($where)->find();
+        $result = $this->where($where)->field('group_id')->select();
         return $result;
     }
 

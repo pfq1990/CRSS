@@ -16,4 +16,29 @@ class UserNameModel extends BaseModel
 {
     protected $tableName="crs_user_name";
 
+    /**
+     * 根据id更新用户登录时间
+     * @author pfq1990 <pfq1990@126.com> (2018/06/08)
+     * @param unknown $name
+     */
+    public function updateLoginTime($name)
+    {
+        $where = array(
+            'user_name' => $name,
+        );
+        $saveData = array(
+            'lastlogin_time' => time(),
+        );
+        return $this->where($where)->save($saveData);
+    }
+
+    public function checkUserName($name){
+        $where=array(
+            'user_name'=>$name,
+        );
+        return $this->find();
+    }
+
+
+
 }

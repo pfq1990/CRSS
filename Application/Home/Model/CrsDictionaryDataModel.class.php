@@ -21,7 +21,7 @@ class CrsDictionaryDataModel extends BaseModel
             'user_id'=>$uid,
         );
         $data=$this->where($where)->find();
-        $list=D('CrsDictionaryDataItem')->getUserDictionaryList($data['id'],$num);
+        $list=D('Home/CrsDictionaryDataItem')->getUserDictionaryList($data['id'],$num);
         return array('page'=>$list['page'],'list'=>$list['list'],'default'=>$data['value']);
     }
 

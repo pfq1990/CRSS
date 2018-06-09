@@ -17,7 +17,7 @@ class DictionaryController extends CommonController
     public function __construct(){
         parent::__construct();
 
-        $crs_dictionary_model=D('CrsDictionaryData');
+        $crs_dictionary_model=D('Home/CrsDictionaryData');
         $this->crs_dictionary_model=$crs_dictionary_model;
     }
 

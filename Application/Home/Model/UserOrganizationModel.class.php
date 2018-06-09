@@ -17,4 +17,14 @@ class UserOrganizationModel extends BaseModel
 
     protected $tableName="crs_user_organization";
 
+    public function select_user_organization($uid,$gid){
+        $where=array(
+            'uid'=>$uid,
+            'gid'=>$gid
+        );
+        $user_organization=$this->where($where)->select();
+
+    }
+
+
 }

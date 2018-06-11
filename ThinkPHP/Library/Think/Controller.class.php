@@ -215,9 +215,9 @@ abstract class Controller {
                 header('Content-Type:application/json; charset=utf-8');
 
                 //允许跨域
-                header('Access-Control-Allow-Origin: *');
-                header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
-                header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
+                //header('Access-Control-Allow-Origin: *');
+                //header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+                //header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
 
                 exit(json_encode($data,$json_option));
             case 'XML'  :

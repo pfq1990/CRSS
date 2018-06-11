@@ -15,4 +15,10 @@ class CurriculumModel extends BaseModel
 
     protected $tableName="crs_curriculum";
 
+    public function getUserCurriculum($oid){
+        $where['unit']=array('in',$oid);
+        return $this->where($where)->select();
+    }
+
+
 }

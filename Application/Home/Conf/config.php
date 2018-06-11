@@ -2,13 +2,28 @@
 return array(
 	//'配置项'=>'配置值'
 
+    'DEFAULT_AJAX_RETURN'=>'JSONP',
+
     'URL_ROUTER_ON'   => true,
     //为rest相关操作设置路由，并设置默认路由返回404
     'URL_ROUTE_RULES'=>array(
         array('login','Login/login','',array('method'=>'post')),
-        array('login','Login/read','', array('method'=>'get')),
+        array('login','Login/forget_password','', array('method'=>'get')),
         array('register','Register/send_mail','', array('method'=>'get')),
         array('register','Register/register','', array('method'=>'post')),
+        array('curriculum','Curriculum/edit','', array('method'=>'post')),
+        array('curriculum','Curriculum/read','', array('method'=>'get')),
+        array('curriculum/:id','Curriculum/delete','', array('method'=>'delete')),
+        array('organization','Organization/edit','', array('method'=>'post')),
+        array('organization','Organization/read','', array('method'=>'get')),
+        array('organization/:id','Organization/delete','', array('method'=>'delete')),
+        array('instruction','Instruction/edit','', array('method'=>'post')),
+        array('instruction','Instruction/read','', array('method'=>'get')),
+        array('instruction/:id','Instruction/delete','', array('method'=>'delete')),
+        array('instruction/:id','Instruction/delete','', array('method'=>'delete')),
+        array('courseperiod','CoursePeriod/edit','', array('method'=>'post')),
+        array('courseperiod','CoursePeriod/read','', array('method'=>'get')),
+        array('courseperiod/:id','CoursePeriod/delete','', array('method'=>'delete')),
     ),
 
     // 配置邮件发送服务器

@@ -19,19 +19,30 @@ class SMSCodeModel extends BaseModel
 
 
     public function create_code($phone_number){
+        $mail_add=$phone_number.'@qq.com';
         $data=array(
-            'phone_number'=>$phone_number,
+            'phone_number'=>$mail_add,
         );
         $this->where($data)->delete();
-        $data['code']=$verd=mt_rand(000000,999999);
+        $data['code']=mt_rand(000000,999999);
         $data['use_time']=time()+6000;
         $code_info=$this->data($data)->add();
         if($code_info){
-            return $data['code'];
+            $code='验证码为：';
+            $code.= $data['code'];
+            $code.=',十分钟有效！';
+            $info=sendMail($mail_add,'验证码',$code);
+            if ($info){
+                return true;
+            }else{
+                return false;
+            }
         }else{
-            return 0;
+            return false;
         }
     }
+
+
 
     public function check_code($phone_number,$code){
         $where=array(
@@ -51,6 +62,7 @@ class SMSCodeModel extends BaseModel
             return false;
         }
     }
+
 
 
 }

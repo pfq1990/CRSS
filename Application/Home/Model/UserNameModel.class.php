@@ -39,6 +39,14 @@ class UserNameModel extends BaseModel
         return $this->find();
     }
 
+    public function getUserId($name){
+        $where=array(
+            'user_name'=>$name,
+            'status'=> parent::NORMAL_STATUS
+        );
+        $info=$this->where($where)->find();
+        return $info['user_id'];
+    }
 
 
 }

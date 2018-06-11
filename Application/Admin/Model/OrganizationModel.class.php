@@ -30,4 +30,21 @@ class OrganizationModel extends BaseModel
 
     }
 
+    public function getAllOid($id){
+        $returnStr='';
+        $returnStr.=$id;
+        $where=array(
+            'id'=>$id,
+        );
+        $level=3;
+        while ($level){
+            $info=$this->where($where)->find();
+            $level=$info['level'];
+            if ($info['pid'])$returnStr.=','.$info['pid'];
+            $where=array(
+                'id'=>$info['pid'],
+            );
+        }
+        return $returnStr;
+    }
 }

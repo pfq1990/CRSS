@@ -22,9 +22,8 @@ class UserOrganizationModel extends BaseModel
             'uid'=>$uid,
             'gid'=>$gid
         );
-        $user_organization=$this->where($where)->select();
-
+        $user_organization=$this->field('oid , number')->where($where)->select();
+        return $user_organization;
     }
-
 
 }

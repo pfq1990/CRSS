@@ -1,64 +1,53 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: pfq1990
- * Date: 2018/6/8
- * Time: 22:17
+ * User: Administrator
+ * Date: 2018/6/11
+ * Time: 13:04
  */
 
 namespace Home\Controller;
 
 
-use Think\Controller\RestController;
-
-class CurriculumController extends CommonController
+class TimeTableController extends CommonController
 {
+    protected $time_table_model;
 
-    protected $user_organization_model;
-    protected $curriculum_model;
+    protected $organization_model;
 
     public function __construct()
     {
-        $this->user_organization_model=D('UserOrganization');
-        $this->curriculum_model=D('Admin/Curriculum');
+        $this->time_table_model=D('Admin/TimeTable');
+        $this->organization_model=D('Admin/Organization');
     }
 
     public function read(){
-        $user_id=I('uid');
-        $group_id=I('gid');
-        $oidstr='';
-        $user_oid=$this->user_organization_model->select_user_organization($user_id,$group_id);
+        $oid=I('oid');
+        $user_oid=$this->organization_model->getRootOid($oid);
         if (!$user_oid){
-            $this->ajaxReturn(array('status'=>1,'msg'=>'该用户还未设置学校！'));
+            $this->ajaxReturn(array('status'=>1,'msg'=>'该学校未添加！'));
         }else{
-            foreach ($user_oid as $value){
-                $info=D('Admin/Organization')->getAllOid($value['oid']);
-                if($info&&$oidstr){
-                    $oidstr.=',';
-                }
-                $oidstr.=$info;
-            }
-            $curriculum_info=$this->curriculum_model->getUserCurriculum($oidstr);
+            $curriculum_info=$this->time_table_model->getTimeTable($user_oid);
             $this->ajaxReturn(array('status'=>0,'msg'=>'查询成功！','data'=>$curriculum_info));
         }
     }
 
     public function edit(){
 
-        $data=$this->curriculum_model->create();
+        $data=$this->time_table_model->create();
 
         if($data['id']){
             $where=array(
                 'id'=>$data['id'],
             );
-            $info=$this->curriculum_model->where($where)->save($data);
+            $info=$this->time_table_model->where($where)->save($data);
             if ($info){
                 $this->ajaxReturn(array('status'=>0,'msg'=>'修改成功！'));
             }else{
                 $this->ajaxReturn(array('status'=>1,'msg'=>'修改失败！'));
             }
         }else{
-            $info=$this->curriculum_model->data($data)->add();
+            $info=$this->time_table_model->data($data)->add();
             if ($info){
                 $this->ajaxReturn(array('status'=>0,'msg'=>'添加成功！','data'=>$info));
             }else{
@@ -76,7 +65,7 @@ class CurriculumController extends CommonController
             'id'=>$id
         );
 
-        $info=$this->curriculum_model->where($where)->delete();
+        $info=$this->time_table_model->where($where)->delete();
 
         if ($info){
             $this->ajaxReturn(array('status'=>0,'msg'=>'删除成功！'));
@@ -85,5 +74,4 @@ class CurriculumController extends CommonController
         }
 
     }
-
 }

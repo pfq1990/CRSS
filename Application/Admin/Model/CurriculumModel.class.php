@@ -20,5 +20,12 @@ class CurriculumModel extends BaseModel
         return $this->where($where)->select();
     }
 
+    public function getUnit($id){
+        $where=array(
+            $id=>'id'
+        );
+        $info=$this->where($where)->find();
+        return $info['unit'];
+    }
 
 }

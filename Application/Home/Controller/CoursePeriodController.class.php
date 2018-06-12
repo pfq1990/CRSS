@@ -22,14 +22,49 @@ class CoursePeriodController extends CommonController
 
     public function read(){
         $course_id=I('cid');
-        $where=array(
-            'course_id'=>$course_id
-        );
-        $user_course_period=$this->course_period_model->where($where)->select();
+        $user_course_period=$this->course_period_model->getCoursePeriodModelByIId($course_id);
         if ($user_course_period){
             $this->ajaxReturn(array('status'=>0,'msg'=>'查询成功！','data'=>$user_course_period));
         }else{
             $this->ajaxReturn(array('status'=>1,'msg'=>'查询失败！'));
+        }
+    }
+
+    public function read_user(){
+        $user_id=I('uid');
+        $user_course_period=$this->course_period_model->getCoursePeriodModelByUId($user_id);
+        if ($user_course_period){
+            $this->ajaxReturn(array('status'=>0,'msg'=>'查询成功！','data'=>$user_course_period));
+        }else{
+            $this->ajaxReturn(array('status'=>1,'msg'=>'查询失败！'));
+        }
+    }
+
+    public function add(){
+        $begin_week=I('begin');
+        $end_week=I('end');
+        $week=I('week');
+        $uid=I('uid');
+        $cid=I('cid');
+        $room=I('room');
+        $time=I('time');
+        $data=array(
+            'course_id'=>$cid,
+            'class_room'=>$room,
+            'teaching_week'=>$begin_week,
+            'week'=>$week,
+            'lecturer'=>$uid,
+            'status'=>1,
+            'ttid'=>$time,
+        );
+        for($i=$begin_week;$i<=$end_week;$i++){
+            $data['teaching_week']=$i;
+            $this->course_period_model->data($data)->add();
+        }
+        if($i>=$end_week){
+            $this->ajaxReturn(array('status'=>0,'msg'=>'添加成功！'));
+        }else{
+            $this->ajaxReturn(array('status'=>1,'msg'=>'添加失败！'));
         }
     }
 
@@ -59,9 +94,9 @@ class CoursePeriodController extends CommonController
 
     }
 
-    public function delete($id){
+    public function delete(){
 
-        //$id=I('id');
+        $id=I('id');
         $where=array(
             'id'=>$id
         );

@@ -16,4 +16,19 @@ class StudentPeriodModel extends BaseModel
 
     protected $tableName="crs_student_period";
 
+    public function getStudentInstruction($period_id){
+        $where=array(
+            'a.period_id'=>$period_id
+        );
+        $join = 'LEFT JOIN crs_user_info b ON b.user_id=a.student_id';
+
+        $field='a.id,b.number,b.name,a.signon_time,a.signout_time,a.x,a.y';
+
+        return $this->alias('a')->where($where)->field($field)->join($join)->select();
+    }
+
+    public function addStudentPeriod($data){
+
+    }
+
 }

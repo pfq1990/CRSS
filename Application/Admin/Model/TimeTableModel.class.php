@@ -15,4 +15,10 @@ class TimeTableModel extends BaseModel
 
     protected $tableName="crs_time_table";
 
+
+    public function getTimeTable($oid){
+        $where['unit']=array('in',$oid);
+        return $this->where($where)->select();
+    }
+
 }

@@ -6,13 +6,18 @@
  * Time: 21:43
  */
 
-namespace Admin\Controller;
+namespace Home\Controller;
 
 
 use Think\Controller;
 
 class TestController extends Controller
 {
+
+    public function getread(){
+        $info=D('CoursePeriod')->getCoursePeriodInfo(5);
+        $this->ajaxReturn(array('status'=>0,'msg'=>'添加成功！','data'=>$info));
+    }
 
       public function qrcode($url='11111111',$level=3,$size=4){
 		  Vendor('phpqrcode.phpqrcode');

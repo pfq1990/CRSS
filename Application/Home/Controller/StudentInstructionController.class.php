@@ -3,15 +3,14 @@
  * Created by PhpStorm.
  * User: pfq1990
  * Date: 2018/6/11
- * Time: 12:23
+ * Time: 22:28
  */
 
 namespace Home\Controller;
 
 
-class InstructionController extends CommonController
+class StudentInstructionController extends CommonController
 {
-
     protected $instruction_model;
 
     public function __construct()
@@ -20,19 +19,18 @@ class InstructionController extends CommonController
     }
 
     public function read(){
-        $user_id=I('uid');
-        $user_instruction=$this->instruction_model->getUserInstruction($user_id);
-        if ($user_instruction){
+        $uid=I('uid');
+        $iid=D('StudentList')->get_user_instruction($uid);
+        $user_instruction=$this->instruction_model->getStudentInstruction($iid);
+        if($user_instruction){
             $this->ajaxReturn(array('status'=>0,'msg'=>'查询成功！','data'=>$user_instruction));
         }else{
             $this->ajaxReturn(array('status'=>1,'msg'=>'查询失败！'));
         }
     }
 
-    public function edit(){
-
+    public function add(){
         $data=$this->instruction_model->create();
-
         if($data['id']){
             $where=array(
                 'id'=>$data['id'],
@@ -51,25 +49,23 @@ class InstructionController extends CommonController
                 $this->ajaxReturn(array('status'=>1,'msg'=>'添加失败！'));
             }
         }
-
-
     }
 
-    public function delete(){
+    public function delete()
+    {
 
-        $id=I('id');
-        $where=array(
-            'id'=>$id
+        $id = I('id');
+        $where = array(
+            'id' => $id
         );
 
-        $info=$this->instruction_model->where($where)->delete();
+        $info = $this->instruction_model->where($where)->delete();
 
-        if ($info){
-            $this->ajaxReturn(array('status'=>0,'msg'=>'删除成功！'));
-        }else{
-            $this->ajaxReturn(array('status'=>1,'msg'=>'删除失败！','data'=>$where));
+        if ($info) {
+            $this->ajaxReturn(array('status' => 0, 'msg' => '删除成功！'));
+        } else {
+            $this->ajaxReturn(array('status' => 1, 'msg' => '删除失败！', 'data' => $where));
         }
-
     }
 
 }

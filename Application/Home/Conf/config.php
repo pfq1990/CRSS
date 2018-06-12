@@ -2,11 +2,11 @@
 return array(
 	//'配置项'=>'配置值'
 
-    'DEFAULT_AJAX_RETURN'=>'JSONP',
+    //'DEFAULT_AJAX_RETURN'=>'JSONP',
 
-    'URL_ROUTER_ON'   => true,
+    //'URL_ROUTER_ON'   => true,
     //为rest相关操作设置路由，并设置默认路由返回404
-    'URL_ROUTE_RULES'=>array(
+    /*'URL_ROUTE_RULES'=>array(
         array('login','Login/login','',array('method'=>'post')),
         array('login','Login/forget_password','', array('method'=>'get')),
         array('register','Register/send_mail','', array('method'=>'get')),
@@ -24,7 +24,10 @@ return array(
         array('courseperiod','CoursePeriod/edit','', array('method'=>'post')),
         array('courseperiod','CoursePeriod/read','', array('method'=>'get')),
         array('courseperiod/:id','CoursePeriod/delete','', array('method'=>'delete')),
-    ),
+        array('timetable','TimeTable/edit','', array('method'=>'post')),
+        array('timetable','TimeTable/read','', array('method'=>'get')),
+        array('timetable/:id','TimeTable/delete','', array('method'=>'delete')),
+    ),*/
 
     // 配置邮件发送服务器
     'MAIL_HOST' =>'smtp.126.com',//smtp服务器的名称

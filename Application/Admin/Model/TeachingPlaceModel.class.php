@@ -30,4 +30,12 @@ class TeachingPlaceModel extends BaseModel
 
     }
 
+    public function getItem($id){
+        $where=array(
+            'id'=>$id,
+            'status'  => parent::NORMAL_STATUS,
+        );
+        return $this->where($where)->find();
+    }
+
 }

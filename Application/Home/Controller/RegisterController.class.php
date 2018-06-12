@@ -9,14 +9,14 @@
 namespace Home\Controller;
 
 
-use Think\Controller\RestController;
+use Think\Controller;
 
 
-class RegisterController extends RestController
+class RegisterController extends Controller
 {
 
-    protected $allowMethod    = array('get','post','put','delete');
-    protected $allowType      = array('html','xml','json'); // REST允许请求的资源类型列表
+    //protected $allowMethod    = array('get','post','put','delete');
+    //protected $allowType      = array('html','xml','json'); // REST允许请求的资源类型列表
 
 
     public function __construct()

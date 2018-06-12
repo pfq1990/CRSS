@@ -21,6 +21,7 @@ class OrganizationController extends CommonController
     public function read(){
 
         $organization=$this->organization_model->select();
+        $organization=get_column($organization,2);
         if ($organization){
             $this->ajaxReturn(array('status'=>0,'msg'=>'查询成功！','data'=>$organization));
         }else{
@@ -54,9 +55,9 @@ class OrganizationController extends CommonController
 
     }
 
-    public function delete($id){
+    public function delete(){
 
-        //$id=I('id');
+        $id=I('id');
         $where=array(
             'id'=>$id
         );

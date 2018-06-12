@@ -3,48 +3,60 @@
  * Created by PhpStorm.
  * User: pfq1990
  * Date: 2018/6/11
- * Time: 12:23
+ * Time: 16:47
  */
 
 namespace Home\Controller;
 
 
-class InstructionController extends CommonController
+class TeachingPlaceController extends CommonController
 {
 
-    protected $instruction_model;
+    protected $teaching_place_model;
+
+    protected $organization_model;
 
     public function __construct()
     {
-        $this->instruction_model=D('Instruction');
+        $this->teaching_place_model=D('Admin/TeachingPlace');
+        $this->organization_model=D('Admin/Organization');
     }
 
     public function read(){
+        $group_id=I('gid');
         $user_id=I('uid');
-        $user_instruction=$this->instruction_model->getUserInstruction($user_id);
-        if ($user_instruction){
-            $this->ajaxReturn(array('status'=>0,'msg'=>'查询成功！','data'=>$user_instruction));
+        $oid=D('UserOrganization')->get_user_oid($user_id,$group_id);
+        if ($oid){
+            $user_oid=$this->organization_model->getAllOid($oid['oid']);
+            $where['oid']=array('in',$user_oid);
+            if (!$user_oid){
+                $this->ajaxReturn(array('status'=>1,'msg'=>'该学校未添加！'));
+            }else{
+                $info=$this->teaching_place_model->where($where)->select();
+                $this->ajaxReturn(array('status'=>0,'msg'=>'查询成功！','data'=>$info));
+            }
         }else{
-            $this->ajaxReturn(array('status'=>1,'msg'=>'查询失败！'));
+            $this->ajaxReturn(array('status'=>1,'msg'=>'该用户还未设置学校！'));
         }
+
     }
 
     public function edit(){
 
-        $data=$this->instruction_model->create();
+        $data=$this->teaching_place_model->create();
 
         if($data['id']){
             $where=array(
                 'id'=>$data['id'],
             );
-            $info=$this->instruction_model->where($where)->save($data);
+            $info=$this->teaching_place_model->where($where)->save($data);
             if ($info){
                 $this->ajaxReturn(array('status'=>0,'msg'=>'修改成功！'));
             }else{
                 $this->ajaxReturn(array('status'=>1,'msg'=>'修改失败！'));
             }
         }else{
-            $info=$this->instruction_model->data($data)->add();
+            $info=$this->teaching_place_model->data($data)->add();
             if ($info){
                 $this->ajaxReturn(array('status'=>0,'msg'=>'添加成功！','data'=>$info));
             }else{
@@ -62,7 +74,7 @@ class InstructionController extends CommonController
             'id'=>$id
         );
 
-        $info=$this->instruction_model->where($where)->delete();
+        $info=$this->teaching_place_model->where($where)->delete();
 
         if ($info){
             $this->ajaxReturn(array('status'=>0,'msg'=>'删除成功！'));

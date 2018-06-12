@@ -25,5 +25,13 @@ class UserOrganizationModel extends BaseModel
         $user_organization=$this->field('oid , number')->where($where)->select();
         return $user_organization;
     }
+    public function get_user_oid($uid,$gid){
+        $where=array(
+            'uid'=>$uid,
+            'gid'=>$gid
+        );
+        $user_organization=$this->field('oid')->where($where)->find();
+        return $user_organization;
+    }
 
 }

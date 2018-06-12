@@ -89,4 +89,12 @@ class UserModel extends BaseModel
         return $this->where($where)->save($saveData);
     }
 
+    public function read_user_info($id,$gid){
+        $where='a.id='.$id.' and b.gid='.$gid;
+        $table='admin_user a,crs_user_organization b ,crs_user_info c';
+        $where.=' and a.id=b.uid and b.number=c.number and b.uid=c.user_id';
+        $field='a.id,a.user_name,b.number,b.gid,c.name';
+        return $this->table($table)->where($where)->field($field)->find();
+    }
+
 }

@@ -47,4 +47,24 @@ class OrganizationModel extends BaseModel
         }
         return $returnStr;
     }
+
+    public function getRootOid($id){
+        $returnid=$id;
+        $where=array(
+            'id'=>$id,
+        );
+        $level=3;
+        while ($level){
+            $info=$this->where($where)->find();
+            $level=$info['level'];
+            if ($info['pid']){
+                $returnid=$info['pid'];
+                $where=array(
+                    'id'=>$info['pid'],
+                );
+            }
+
+        }
+        return $returnid;
+    }
 }

@@ -9,9 +9,9 @@
 namespace Home\Controller;
 
 
-use Think\Controller\RestController;
+use Think\Controller;
 
-class LoginController extends RestController
+class LoginController extends Controller
 {
 
 
@@ -50,7 +50,11 @@ class LoginController extends RestController
             $this->ajaxReturn(array('status'=>1,'msg'=>'该版本客户端不支持该角色用户！'));
         }
         $admin_user_model->updateLoginTime($user_info['id']);
-        $user_info['gid']=$auth_info;
+        $gid=array();
+        foreach ($auth_info as $value){
+            $gid[$value['group_id']]=$admin_user_model->read_user_info($user_info['id'],$value['group_id']);
+        }
+        $user_info['gid']=$gid;
 
         $this->ajaxReturn(array('status'=>0,'msg'=>'登录成功！','data'=>$user_info));
     }

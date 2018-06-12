@@ -13,10 +13,12 @@ class StudentPeriodController extends CommonController
 {
 
     protected $student_period_model;
+    protected $course_period_model;
 
     public function __construct()
     {
         $this->student_period_model=D('StudentPeriod');
+        $this->course_period_model=D('CoursePeriod');
     }
 
     public function read(){
@@ -95,6 +97,19 @@ class StudentPeriodController extends CommonController
             'status'=>1,
         );
         $where=array(
+            'id'=>$data['period_id'],
+        );
+        $info=$this->course_period_model->where($where)->find();
+        if ($info['status']==1){
+            $cdata=array(
+                'status'=>2,
+            );
+            $info=$this->course_period_model->where($where)->save($cdata);
+            if (!$info){
+                $this->ajaxReturn(array('status'=>1,'msg'=>'签到失败！'));
+            }
+        }
+        $where=array(
 //            'id'=>$data['id'],
             'period_id'=>$data['period_id'],
             'student_id'=>$data['student_id']
@@ -133,6 +148,10 @@ class StudentPeriodController extends CommonController
             'period_id'=>$data['period_id'],
             'student_id'=>$data['student_id']
         );
+        $finddata=$this->student_period_model->where($where)->find();
+        if (!$finddata['signon']){
+            $this->ajaxReturn(array('status'=>1,'msg'=>'您还没有签到！'));
+        }
         $info=$this->student_period_model->where($where)->save($data);
         if ($info){
             $this->ajaxReturn(array('status'=>0,'msg'=>'签退成功！','data'=>$info));

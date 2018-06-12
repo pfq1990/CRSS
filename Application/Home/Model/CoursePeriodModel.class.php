@@ -55,4 +55,27 @@ class CoursePeriodModel extends BaseModel
         );
     }
 
+    public function getCoursePeriodIdList($iid){
+        $returnStr='';
+        $where=array(
+            'course_id'=>$iid
+        );
+        $info=$this->where($where)->field('id')->select();
+        foreach ($info as $key => $value){
+            $returnStr.=$value['id'];
+            if ($info[$key+1])$returnStr.=',';
+
+        }
+        return $returnStr;
+    }
+
+    public function getCoursePeriodCount($iid){
+        $where=array(
+            'course_id'=>$iid
+        );
+        $where['status']=array('NEQ','1');
+        $info=$this->where($where)->count();
+        return $info;
+    }
+
 }

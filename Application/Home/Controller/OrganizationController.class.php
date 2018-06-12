@@ -67,7 +67,7 @@ class OrganizationController extends CommonController
         if ($info){
             $this->ajaxReturn(array('status'=>0,'msg'=>'删除成功！'));
         }else{
-            $this->ajaxReturn(array('status'=>1,'msg'=>'删除失败！','data'=>$where));
+            $this->ajaxReturn(array('status'=>1,'msg'=>'删除失败！'));
         }
 
     }

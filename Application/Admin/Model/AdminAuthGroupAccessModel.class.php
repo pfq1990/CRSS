@@ -53,6 +53,10 @@ class AdminAuthGroupAccessModel extends BaseModel
             'group_id'=>array('neq',$group_id),
         );
         $result = $this->where($where)->field('group_id')->select();
+        foreach ($result as $key =>$value){
+            $result[$key]['number']=D('Home/UserOrganization')->get_user_number($user_id,$value['group_id']);
+        }
+
         return $result;
     }
 

@@ -16,4 +16,12 @@ class UserInfoModel extends BaseModel
 
     protected $tableName="crs_user_info";
 
+    public function getUserName($uid){
+        $where=array(
+            'user_id'=>$uid
+        );
+        $data=$this->where($where)->find();
+        return $data['name'];
+    }
+
 }

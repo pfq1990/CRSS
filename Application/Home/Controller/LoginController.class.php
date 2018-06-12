@@ -50,12 +50,12 @@ class LoginController extends Controller
             $this->ajaxReturn(array('status'=>1,'msg'=>'该版本客户端不支持该角色用户！'));
         }
         $admin_user_model->updateLoginTime($user_info['id']);
-        $gid=array();
+        /*$gid=array();
         foreach ($auth_info as $value){
             $gid[$value['group_id']]=$admin_user_model->read_user_info($user_info['id'],$value['group_id']);
-        }
-        $user_info['gid']=$gid;
-
+        }*/
+        $user_info['gid']=$auth_info;
+        $user_info['name']=D('UserInfo')->getUserName($user_info['id']);
         $this->ajaxReturn(array('status'=>0,'msg'=>'登录成功！','data'=>$user_info));
     }
 

@@ -37,11 +37,12 @@ function get_column($array,$type=1,$fid=0,$level=0)
  */
 function sendMail($to, $title, $content) {
 
-    require('./ThinkPHP/Library/Vendor/PHPMailer/class.phpmailer.php');
+    //require('./ThinkPHP/Library/Vendor/PHPMailer/class.phpmailer.php');
+    Vendor('PHPMailer.PHPMailerAutoload');
     $mail= new \PHPMailer();
     $mail->IsSMTP(); // 启用SMTP
-  //  $mail->SMTPSecure = 'ssl';
- //   $mail->Port = 587;
+//    $mail->SMTPSecure = 'ssl';
+//    $mail->Port = 587;
     $mail->Host=C('MAIL_HOST'); //smtp服务器的名称（这里以QQ邮箱为例）
     $mail->SMTPAuth = C('MAIL_SMTPAUTH'); //启用smtp认证
     //$mail->AddReplyTo('1135933226@qq.com', 'CRS系统邮件');//回复地址

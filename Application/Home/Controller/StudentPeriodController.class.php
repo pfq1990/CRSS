@@ -48,7 +48,11 @@ class StudentPeriodController extends CommonController
     }
 
     public function add(){
-        $data=$this->student_period_model->create();
+        if (IS_POST){
+            $data=$this->student_period_model->create();
+        }else{
+            $data=$_GET;
+        }
         if($data['id']){
             $where=array(
                 'id'=>$data['id'],

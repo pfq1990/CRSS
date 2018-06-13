@@ -69,8 +69,11 @@ class CoursePeriodController extends CommonController
     }
 
     public function edit(){
-
-        $data=$this->course_period_model->create();
+        if (IS_POST){
+            $data=$this->course_period_model->create();
+        }else{
+            $data=$_GET;
+        }
 
         if($data['id']){
             $where=array(

@@ -31,7 +31,13 @@ class InstructionController extends CommonController
 
     public function edit(){
 
-        $data=$this->instruction_model->create();
+        //$data=$this->instruction_model->create();
+        if (IS_POST){
+            $data=$this->instruction_model->create();
+        }else{
+            $data=$_GET;
+        }
+
 
         if($data['id']){
             $where=array(

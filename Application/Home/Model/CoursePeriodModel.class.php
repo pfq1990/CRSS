@@ -78,4 +78,12 @@ class CoursePeriodModel extends BaseModel
         return $info;
     }
 
+    public function getCoursePeriodTotalCount($iid){
+        $where=array(
+            'course_id'=>$iid
+        );
+        $info=$this->where($where)->count();
+        return $info;
+    }
+
 }

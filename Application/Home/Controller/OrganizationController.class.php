@@ -31,7 +31,12 @@ class OrganizationController extends CommonController
 
     public function edit(){
 
-        $data=$this->organization_model->create();
+
+        if (IS_POST){
+            $data=$this->organization_model->create();
+        }else{
+            $data=$_GET;
+        }
 
         if($data['id']){
             $where=array(

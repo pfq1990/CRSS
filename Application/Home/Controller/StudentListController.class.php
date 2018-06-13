@@ -32,7 +32,13 @@ class StudentListController extends CommonController
 
     public function edit(){
 
-        $data=$this->student_list_model->create();
+        if(IS_POST){
+            $data=$this->student_list_model->create();
+        }else{
+            $data=$_GET;
+        }
+
+
 
         if($data['id']){
             $where=array(
@@ -56,6 +62,29 @@ class StudentListController extends CommonController
 
     }
 
+    public function add(){
+        $data=array(
+            'instruction_id'=>I('iid'),
+            'student_id'=>I('student_id'),
+        );
+        $info=$this->student_list_model->where($data)->find();
+        if($info){
+            if($info['status']==1){
+                $this->ajaxReturn(array('status'=>1,'msg'=>'该用户已经添加了该课程！'));
+            }else{
+                $this->ajaxReturn(array('status'=>1,'msg'=>'该用户已经任课老师加入黑名单！'));
+            }
+        }else{
+            $data['status']=1;
+            $info=$this->student_list_model->data($data)->add();
+            if ($info){
+                $this->ajaxReturn(array('status'=>0,'msg'=>'添加成功！','data'=>$info));
+            }else{
+                $this->ajaxReturn(array('status'=>1,'msg'=>'添加失败！'));
+            }
+        }
+    }
+
     public function delete()
     {
 
@@ -64,7 +93,7 @@ class StudentListController extends CommonController
             'id' => $id
         );
 
-        $info = $this->course_period_model->where($where)->delete();
+        $info = $this->student_list_model->where($where)->delete();
 
         if ($info) {
             $this->ajaxReturn(array('status' => 0, 'msg' => '删除成功！'));
@@ -75,5 +104,23 @@ class StudentListController extends CommonController
     }
 
 
+    public function join_blacklist(){
+        $id = I('id');
+        $where = array(
+            'id' => $id
+        );
+
+        $data=array(
+            'status'=>2
+        );
+
+        $info = $this->student_list_model->where($where)->save($data);
+
+        if ($info) {
+            $this->ajaxReturn(array('status' => 0, 'msg' => '加入黑名单成功！'));
+        } else {
+            $this->ajaxReturn(array('status' => 1, 'msg' => '加入黑名单失败！'));
+        }
+    }
 
 }

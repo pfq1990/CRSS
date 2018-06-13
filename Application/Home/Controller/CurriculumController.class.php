@@ -45,7 +45,12 @@ class CurriculumController extends CommonController
 
     public function edit(){
 
-        $data=$this->curriculum_model->create();
+
+        if (IS_POST){
+            $data=$this->curriculum_model->create();
+        }else{
+            $data=$_GET;
+        }
 
         if($data['id']){
             $where=array(

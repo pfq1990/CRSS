@@ -20,7 +20,7 @@ class StudentListModel extends BaseModel
     public function read_student_list($iid){
         $where='a.instruction_id='.$iid;
         $table='crs_student_list a,crs_user_info b';
-        $where.=' and a.student=b.uid';
+        $where.=' and a.student_id=b.user_id and a.status=1';
         $field='a.id,b.name,b.number';
         return $this->table($table)->where($where)->field($field)->select();
     }
@@ -28,11 +28,13 @@ class StudentListModel extends BaseModel
     public function get_user_instruction($uid){
         $where=array(
             'student_id'=>$uid,
+            'status'=>1
         );
         $info=$this->where($where)->field('instruction_id')->select();
         $data='';
-        foreach ($info as  $value){
+        foreach ($info as $key => $value){
             $data.=$value['instruction_id'];
+            if($info[$key+1])$data.=',';
         }
         return $data;
     }

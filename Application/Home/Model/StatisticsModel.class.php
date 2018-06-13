@@ -26,12 +26,15 @@ class StatisticsModel extends BaseModel
         $data=$this->alias('a')->where($where)->field($field)->join($join)->select();
         foreach ($data as $key => $value){
             $where=array(
-                'instruction_id'=>$value['id']
+                'instruction_id'=>$value['id'],
+                'status'=>1
             );
             $data[$key]['real_student_number']=D('StudentList')->where($where)->count('id');
             $info=D('CoursePeriod')->getCoursePeriodIdList($value['id']);
             $overdue=D('CoursePeriod')->getCoursePeriodCount($value['id']);
             $data[$key]['sign_count']=$overdue;
+            $plan_count=D('CoursePeriod')->getCoursePeriodTotalCount($value['id']);
+            $data[$key]['plan_count']=$plan_count;
             $where['period_id']=array('in',$info);
             $total=D('StudentPeriod')->where($where)->count();
             $data[$key]['play_truant']=$overdue*$data[$key]['real_student_number']-$total;
@@ -53,7 +56,8 @@ class StatisticsModel extends BaseModel
 
     public function statistics_user($iid){
         $where=array(
-            'instruction_id'=>$iid
+            'instruction_id'=>$iid,
+            'status'=>1
         );
         $user_list=D('StudentList')->where($where)->field('student_id')->select();
         $overdue=D('CoursePeriod')->getCoursePeriodCount($iid);

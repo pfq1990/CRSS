@@ -22,7 +22,9 @@ class InstructionModel extends BaseModel
         );
         $join = 'LEFT JOIN crs_curriculum b ON b.id=a.course_id';
 
-        return $this->alias('a')->where($where)->join($join)->select();
+        $field='a.id,a.teaching_year,a.term,a.course_id as cid,a.teacher_id,a.student_number,b.period,b.unit,b.course_id,b.course_name';
+
+        return $this->alias('a')->where($where)->field($field)->join($join)->select();
 
     }
 

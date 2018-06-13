@@ -20,8 +20,9 @@ class OrganizationController extends CommonController
 
     public function read(){
 
+        $type=I('type');
         $organization=$this->organization_model->select();
-        $organization=get_column($organization,2);
+        $organization=get_column($organization,$type);
         if ($organization){
             $this->ajaxReturn(array('status'=>0,'msg'=>'查询成功！','data'=>$organization));
         }else{

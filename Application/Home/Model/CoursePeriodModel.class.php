@@ -21,7 +21,7 @@ class CoursePeriodModel extends BaseModel
         $where='a.course_id='.$iid;
         $table='crs_course_period a,crs_instruction b ,crs_curriculum c,crs_teaching_place d,crs_time_table e,crs_user_info f';
         $where.=' and a.course_id=b.id and b.course_id=c.id and a.class_room=d.id and a.ttid=e.id and b.teacher_id=f.user_id';
-        $field='a.id,c.course_id,a.teaching_week,a.week,c.course_name,d.title as class_room,e.title as time ,f.name as teacher,e.period';
+        $field='a.id,c.course_id,a.teaching_week,a.week,c.course_name,d.title as class_room,d.row_number as row ,d.col_number as col ,d.longitude,d.latitude,e.title as time ,f.name as teacher,e.period';
         return $this->table($table)->where($where)->order('a.teaching_week asc,a.week asc,a.ttid asc ')->field($field)->select();
     }
 
@@ -30,7 +30,7 @@ class CoursePeriodModel extends BaseModel
         $where='a.lecturer='.$uid;
         $table='crs_course_period a,crs_instruction b ,crs_curriculum c,crs_teaching_place d,crs_time_table e,crs_user_info f';
         $where.=' and a.course_id=b.id and b.course_id=c.id and a.class_room=d.id and a.ttid=e.id and b.teacher_id=f.user_id';
-        $field='a.id,c.course_id,a.teaching_week,a.week,c.course_name,d.title as class_room,e.title as time ,f.name as teacher,e.period';
+        $field='a.id,c.course_id,a.teaching_week,a.week,c.course_name,d.title as class_room,d.row_number as row ,d.col_number as col ,d.longitude,d.latitude,e.title as time ,f.name as teacher,e.period';
         return $this->table($table)->where($where)->order('a.teaching_week asc,a.week asc,a.ttid asc ')->field($field)->select();
 
     }

@@ -22,7 +22,9 @@ class TimeTableController extends CommonController
     }
 
     public function read(){
-        $oid=I('oid');
+        $uid=I('uid');
+        $gid=I('gid');
+        $oid=D('UserOrganization')->select_user_organization($uid,$gid);
         $user_oid=$this->organization_model->getRootOid($oid);
         if (!$user_oid){
             $this->ajaxReturn(array('status'=>1,'msg'=>'该学校未添加！'));

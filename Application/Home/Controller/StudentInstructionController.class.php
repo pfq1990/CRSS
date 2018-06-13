@@ -25,7 +25,7 @@ class StudentInstructionController extends CommonController
         if($user_instruction){
             $this->ajaxReturn(array('status'=>0,'msg'=>'查询成功！','data'=>$user_instruction));
         }else{
-            $this->ajaxReturn(array('status'=>1,'msg'=>'查询失败！',$iid));
+            $this->ajaxReturn(array('status'=>1,'msg'=>'查询失败！'));
         }
     }
 

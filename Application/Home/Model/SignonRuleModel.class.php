@@ -57,4 +57,29 @@ class SignonRuleModel extends BaseModel
         return $rdata;
     }
 
+    public function isOnTime($pid){
+        $info=D('CoursePeriod')->getCoursePeriodInfo($pid);
+        $where=array(
+            'oid'=>$info['oid'],
+        );
+        $minfo=$this->where($where)->find();
+        $where['id']=$info['ttid'];
+        $tinfo=D('Admin/TimeTable')->where($where)->find();
+        $first=D('Admin/TermInfo')->getFirstDate($info['oid']);
+        $datedis=7*($info['teaching_week']-1)+$info['week']-1;
+        $str='+'.$datedis.' day';
+        $sign_time=date('Y-m-d H:i:s',strtotime($str,strtotime($first)));
+        $start_time=$tinfo['start_time'];
+        $end_time=$tinfo['end_time'];
+        $today_date=date('Y-m-d',time());
+        $class_begin_time=strtotime($sign_time)+strtotime($start_time)-strtotime($today_date);
+        $class_end_time=strtotime($sign_time)+strtotime($end_time)-strtotime($today_date);;
+        $begin_dis=$minfo['signon_time']*60;
+        $end_dis=$minfo['signout_time']*60;
+        $this_time=time();
+        if ($this_time > $class_end_time+$end_dis)return false;
+        if ($this_time < $class_begin_time-$begin_dis)return false;
+        return true;
+    }
+
 }

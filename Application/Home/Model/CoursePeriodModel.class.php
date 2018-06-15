@@ -86,4 +86,9 @@ class CoursePeriodModel extends BaseModel
         return $info;
     }
 
+    public function getInstructionByCId($pid){
+        $info=$this->field('course_id,teaching_week,week')->find($pid);
+        return $info;
+    }
+
 }

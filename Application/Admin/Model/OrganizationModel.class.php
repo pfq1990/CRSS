@@ -67,4 +67,12 @@ class OrganizationModel extends BaseModel
         }
         return $returnid;
     }
+
+    public function getOrganizationName($id){
+        $where=array(
+            'id'=>$id
+        );
+        $data=$this->where($where)->find();
+        return $data['title'];
+    }
 }

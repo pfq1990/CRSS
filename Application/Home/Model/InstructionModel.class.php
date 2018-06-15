@@ -56,4 +56,30 @@ class InstructionModel extends BaseModel
 
     }
 
+    public function isOnThisTerm($iid){
+        $year=date("Y",time());
+        $line_start=strtotime($year."-02-26");
+        $line_end=strtotime($year."-08-25");
+        $today=time();
+        if($today>$line_start && $today<$line_end){
+            $where=array(
+                'teaching_year'=>($year-1).'-'.$year,
+                'term'=>2
+            );
+        }else{
+            $where=array(
+                'teaching_year'=>($year).'-'.($year+1),
+                'term'=>1
+            );
+        }
+        $where['id']=$iid;
+        $info=$this->where($where)->find();
+        if ($info){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+
 }

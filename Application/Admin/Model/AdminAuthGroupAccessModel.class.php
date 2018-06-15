@@ -55,6 +55,9 @@ class AdminAuthGroupAccessModel extends BaseModel
         $result = $this->where($where)->field('group_id')->select();
         foreach ($result as $key =>$value){
             $result[$key]['number']=D('Home/UserOrganization')->get_user_number($user_id,$value['group_id']);
+            $oid=D('Home/UserOrganization')->get_user_oid($user_id,$value['group_id']);
+            $result[$key]['oid']=D('Admin/Organization')->getRootOid($oid);
+            $result[$key]['oname']=D('Admin/Organization')->getOrganizationName($result[$key]['oid']);
         }
 
         return $result;

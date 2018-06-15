@@ -31,7 +31,7 @@ class UserOrganizationModel extends BaseModel
             'gid'=>$gid
         );
         $user_organization=$this->field('oid')->where($where)->find();
-        return $user_organization;
+        return $user_organization['oid'];
     }
 
     public function get_user_number($uid,$gid){

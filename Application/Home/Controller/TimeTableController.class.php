@@ -18,19 +18,31 @@ class TimeTableController extends CommonController
     public function __construct()
     {
         $this->time_table_model=D('Admin/TimeTable');
-        $this->organization_model=D('Admin/Organization');
     }
 
     public function read(){
-        $uid=I('uid');
+        /*$uid=I('uid');
         $gid=I('gid');
         $oid=D('UserOrganization')->select_user_organization($uid,$gid);
-        $user_oid=$this->organization_model->getRootOid($oid);
+
+        $user_oid=D('Admin/Organization')->getRootOid($oid);
         if (!$user_oid){
             $this->ajaxReturn(array('status'=>1,'msg'=>'该学校未添加！'));
         }else{
             $curriculum_info=$this->time_table_model->getTimeTable($user_oid);
+            if (!$curriculum_info){
+                $this->ajaxReturn(array('status'=>1,'msg'=>'查询失败！',$user_oid));
+            }else{
+                $this->ajaxReturn(array('status'=>0,'msg'=>'查询成功！','data'=>$curriculum_info));
+            }
+
+        }*/
+        $oid=I('oid');
+        $curriculum_info=$this->time_table_model->getTimeTable($oid);
+        if ($curriculum_info){
             $this->ajaxReturn(array('status'=>0,'msg'=>'查询成功！','data'=>$curriculum_info));
+        }else{
+            $this->ajaxReturn(array('status'=>1,'msg'=>'查询失败！'));
         }
     }
 

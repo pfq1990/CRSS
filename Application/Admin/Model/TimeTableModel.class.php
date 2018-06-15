@@ -17,8 +17,13 @@ class TimeTableModel extends BaseModel
 
 
     public function getTimeTable($oid){
-        $where['unit']=array('in',$oid);
-        return $this->where($where)->select();
+        $where=array(
+            'a.oid'=>$oid
+        );
+        $join = 'LEFT JOIN crs_organization b ON b.id=a.oid';
+        $field='a.id,a.title,a.start_time,a.end_time,a.perior_of_time,a.period,b.id as oid,b.title as oname';
+        $order='a.oid asc ,a.perior_of_time asc';
+        return $this->alias('a')->where($where)->field($field)->order($order)->join($join)->select();
     }
 
 }

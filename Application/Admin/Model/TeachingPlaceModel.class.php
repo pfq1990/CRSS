@@ -20,13 +20,18 @@ class TeachingPlaceModel extends BaseModel
      * @author  pfq1990
      * @return array;
      */
-    public function selectAllPlace()
+    public function selectAllPlace($num=10)
     {
-        $where=array(
-            'status'  => parent::NORMAL_STATUS,
+        $where = array(
+            'status' => parent::NORMAL_STATUS,
         );
 
-        return $this->where($where)->select();
+        $count      = $this->where($where)->count();
+        $page       = new \Think\Page($count,$num);
+        $show       = $page->show();
+        $list       = $this->where($where)->limit($page->firstRow.','.$page->listRows)->select();
+
+        return array('page' => $show , 'list' => $list);
 
     }
 

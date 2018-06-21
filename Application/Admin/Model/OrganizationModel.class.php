@@ -20,13 +20,18 @@ class OrganizationModel extends BaseModel
      * @author  pfq1990
      * @return array;
      */
-    public function selectAllOrganization()
+    public function selectAllOrganization($num=10)
     {
-        $where=array(
-            'status'  => parent::NORMAL_STATUS,
+        $where = array(
+            'status' => parent::NORMAL_STATUS,
         );
 
-        return $this->where($where)->select();
+        $count      = $this->where($where)->count();
+        $page       = new \Think\Page($count,$num);
+        $show       = $page->show();
+        $list       = $this->where($where)->limit($page->firstRow.','.$page->listRows)->select();
+
+        return array('page' => $show , 'list' => $list);
 
     }
 
@@ -75,4 +80,19 @@ class OrganizationModel extends BaseModel
         $data=$this->where($where)->find();
         return $data['title'];
     }
+
+    public function saveNewOrganization($data){
+
+        if(empty($data['level'])&&$data['pid']){
+            $where=array(
+                'id'=>$data['pid']
+            );
+            $info=$this->where($where)->find();
+            $data['level']=$info['level']+1;
+        }
+
+        $data['status']=parent::NORMAL_STATUS;
+        return $this->data($data)->add();
+    }
+
 }

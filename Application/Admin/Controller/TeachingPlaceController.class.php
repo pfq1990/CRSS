@@ -11,7 +11,7 @@ namespace Admin\Controller;
 
 use Think\Controller;
 
-class TeachingPlaceController extends Controller
+class TeachingPlaceController extends CommonController
 {
 
     protected $teachingPlace_model;
@@ -19,7 +19,7 @@ class TeachingPlaceController extends Controller
     public function __construct()
     {
         parent::__construct();
-        /* @var $organization_model \Admin\Model\OrganizationMenuModel */
+        /* @var $organization_model \Admin\Model\TeachingPlaceModel */
 
         $teachingPlace_model = D('TeachingPlace');
 
@@ -28,8 +28,9 @@ class TeachingPlaceController extends Controller
 
     public function index(){
         $teachingPlace = $this->teachingPlace_model->selectAllPlace();
-        //$this->assign("teachingPlace",$teachingPlace);
-        $this->ajaxReturn(array('teachingPlace'=>$teachingPlace));
+        $this->assign("teachingPlace",$teachingPlace['list']);
+        $this->assign('page',$teachingPlace['page']);
+        $this->display();
     }
 
 }

@@ -26,6 +26,13 @@ class TimeTableModel extends BaseModel
         return $this->alias('a')->where($where)->field($field)->order($order)->join($join)->select();
     }
 
+    public function getTimeTablelist($oid){
+        $where['oid']=array(
+            'in',$oid
+        );
+        return $this->where($where)->select();
+    }
+
     /**
      * @description
      * @author  pfq1990

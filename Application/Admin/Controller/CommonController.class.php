@@ -22,7 +22,7 @@ class CommonController extends Controller {
             $name = CONTROLLER_NAME . '/' . ACTION_NAME;
             if(CONTROLLER_NAME != 'Index'){
             
-             $auth = new Auth();
+             /*$auth = new Auth();
             $auth_result = $auth->check($name, $user_info['id']);
             
             if($auth_result === false){
@@ -32,7 +32,7 @@ class CommonController extends Controller {
                     $this->error('没有权限!');
                 }
                 
-            } 
+            } */
         } 
     }
     /**

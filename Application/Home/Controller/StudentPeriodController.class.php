@@ -137,6 +137,7 @@ class StudentPeriodController extends CommonController
             $this->ajaxReturn(array('status'=>1,'msg'=>'签到失败！'));
         }
     }
+
     public function signout(){
         //$data=$this->student_period_model->create();
         $data=array(
@@ -155,6 +156,9 @@ class StudentPeriodController extends CommonController
         $finddata=$this->student_period_model->where($where)->find();
         if (!$finddata['signon']){
             $this->ajaxReturn(array('status'=>1,'msg'=>'您还没有签到！'));
+        }else{
+            if($finddata['signout'])
+                $this->ajaxReturn(array('status'=>1,'msg'=>'您已经签退！'));
         }
         $info=$this->student_period_model->where($where)->save($data);
         if ($info){

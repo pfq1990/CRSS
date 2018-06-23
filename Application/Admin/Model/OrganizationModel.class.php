@@ -35,6 +35,11 @@ class OrganizationModel extends BaseModel
 
     }
 
+    /**
+     * 获取所有能查询到课程的id
+     * @param $id
+     * @return string
+     */
     public function getAllOid($id){
         $returnStr='';
         $returnStr.=$id;
@@ -53,6 +58,11 @@ class OrganizationModel extends BaseModel
         return $returnStr;
     }
 
+    /**
+     * 获取id指示的学校id
+     * @param $id
+     * @return mixed
+     */
     public function getRootOid($id){
         $returnid=$id;
         $where=array(
@@ -73,6 +83,11 @@ class OrganizationModel extends BaseModel
         return $returnid;
     }
 
+    /**
+     * 获取组织名称
+     * @param $id
+     * @return mixed
+     */
     public function getOrganizationName($id){
         $where=array(
             'id'=>$id
@@ -81,6 +96,11 @@ class OrganizationModel extends BaseModel
         return $data['title'];
     }
 
+    /**
+     * 添加组织
+     * @param $data
+     * @return mixed
+     */
     public function saveNewOrganization($data){
 
         if(empty($data['level'])&&$data['pid']){
@@ -93,6 +113,110 @@ class OrganizationModel extends BaseModel
 
         $data['status']=parent::NORMAL_STATUS;
         return $this->data($data)->add();
+    }
+
+    /**
+     * 判断组织是否已经添加
+     * @param $name
+     * @param $pid
+     * @param null $id
+     * @return mixed
+     */
+    public function isExistOrg($name,$pid,$id=null){
+        $where=array(
+            'title'=>$name,
+            'pid'=>$pid,
+            'status'=>parent::NORMAL_STATUS
+        );
+        if($id){
+            $where['id'] = array('neq',$id);
+        }
+        return $this->where($where)->find();
+    }
+
+    /**
+     * 修改组织信息
+     * @param $data
+     * @return bool|\Think\Model
+     */
+    public function editOrganization($data){
+        $where=array(
+            'id'=>$data['id']
+        );
+        unset($data['id']);
+        return $this->where($where)-$this->save($data);
+    }
+
+    /**
+     * 获取组织信息
+     * @param $id
+     * @return mixed
+     */
+    public function getOrganizationById($id){
+        $where=array(
+            'id'=>$id
+        );
+        $data=$this->where($where)->find();
+        return $data;
+    }
+
+    /**
+     * 检查是否存在子项
+     * @param $id
+     * @return mixed
+     */
+    public function isExistSonOrg($id){
+        $where = array(
+            'pid' => $id,
+            'status' => parent::NORMAL_STATUS,
+        );
+
+        return $this->where($where)->find();
+    }
+
+    /**
+     * @description:删除
+     * @author wuyanwen(2016年12月1日)
+     * @param unknown $id
+     */
+    public function deleteOrg($id)
+    {
+        $where = array(
+            'id' => $id,
+        );
+
+        /*
+        $data = array(
+            'status' => parent::DEL_STATUS,
+        );
+
+        return $this->where($where)->save($data);
+        */
+        return $this->where($where)->delete();
+    }
+
+
+    /**
+     * 获取和该学校所有相关的oid
+     * @param $id
+     * @return string
+     */
+    public function getAllSonId($id){
+        $str='';
+        $str.=$id;
+        $where=array(
+            'pid'=>$id,
+        );
+        while ($info=$this->where($where)->field('id')->select()){
+            $tmp='';
+            foreach ($info as $key => $value){
+                $tmp.=$value['id'];
+                if($info[$key+1])$tmp.=',';
+            }
+            $where['pid']=array('in',$tmp);
+            $str.=','.$tmp;
+        }
+        return $str;
     }
 
 }

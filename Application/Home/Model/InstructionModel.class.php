@@ -28,6 +28,26 @@ class InstructionModel extends BaseModel
 
     }
 
+    public function getUserInstructionList($uid,$num=10){
+        $where = array(
+            'teacher_id' => $uid,
+        );
+        $count      = $this->where($where)->count();
+        $page       = new \Think\Page($count,$num);
+        $show       = $page->show();
+        $join = 'LEFT JOIN crs_curriculum b ON b.id=a.course_id';
+
+        $where = array(
+            'a.teacher_id' => $uid,
+        );
+        $field='a.id,a.teaching_year,a.term,a.course_id as cid,a.teacher_id,a.student_number,b.period,b.unit,b.course_id,b.course_name';
+
+        $list       = $this->alias('a')->where($where)->field($field)->join($join)->limit($page->firstRow.','.$page->listRows)->select();
+
+        return array('page' => $show , 'list' => $list);
+
+    }
+
     public function getUserInstructionById($id){
         $where = array(
             'a.id' => $id,

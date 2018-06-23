@@ -1,0 +1,67 @@
+<form class="layui-form">
+  <div class="layui-form-item">
+    <label class="layui-form-label">课程id</label>
+    <div class="layui-input-inline">
+      <input type="text" name="course_id" lay-verify="required" value="{$curriculum.course_id}" placeholder="请输入课程id" autocomplete="off"  id="course_id" class="layui-input">
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">课程名</label>
+    <div class="layui-input-inline">
+      <input type="text" name="course_name" lay-verify="required" value="{$curriculum.course_name}" placeholder="请输入课程名称" autocomplete="off"  id="course_name" class="layui-input">
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">学时</label>
+    <div class="layui-input-inline">
+      <input type="text" name="period" lay-verify="required" value="{$curriculum.period}" placeholder="请输入学时数" autocomplete="off"  id="period" class="layui-input">
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">所属组织</label>
+    <div class="layui-input-inline">
+      <select name="unit" lay-verify="required">
+        <option value="">请选择一个组织</option>
+        <foreach name="organization" key="k" item="vo">
+          <option value="{$vo.id}" <?php if($vo['id']==$curriculum['unit']) echo 'selected' ?> ><?php echo str_repeat("—",$vo["level"]);?>{$vo.title}</option>
+        </foreach>
+      </select>
+    </div>
+  </div>
+  <input type="hidden" name="id" value="{$curriculum.id}">
+  <div class="layui-form-item">
+    <div class="layui-input-block">
+      <button class="layui-btn" lay-submit lay-filter="editcurriculum">立即提交</button>
+      <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+    </div>
+  </div>
+</form>
+<script>
+layui.use('form', function(){
+	var form = layui.form(),
+   		 $ = layui.jquery
+	  //监听提交
+	  form.on('submit(editcurriculum)', function(data){
+		  
+	    var curriculum = data.field;
+	    
+		var url = "{:U('Curriculum/edit')}";
+		$.post(url,curriculum,function(data){
+			if(data.status == 'error'){
+				  layer.msg(data.msg,{icon: 5});//失败的表情
+				  return;
+			  }else if(data.status == 'success'){
+				  layer.msg(data.msg, {
+					  icon: 6,//成功的表情
+					  time: 2000 //2秒关闭（如果不配置，默认是3秒）
+					}, function(){
+					   location.reload();
+					}); 
+			  }
+		})
+
+	    return false;//阻止表单跳转
+	  });
+    form.render();
+	});
+</script>

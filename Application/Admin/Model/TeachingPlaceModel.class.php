@@ -43,4 +43,11 @@ class TeachingPlaceModel extends BaseModel
         return $this->where($where)->find();
     }
 
+    public function getTeachingPlacelist($oid){
+        $where['oid']=array(
+            'in',$oid
+        );
+        return $this->where($where)->select();
+    }
+
 }

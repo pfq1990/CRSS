@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title>教学地点</title>
+		<title>课程管理</title>
 		<link rel="stylesheet" href="__PUBLIC__/plugins/layui/css/layui.css" media="all" />
 		<link rel="stylesheet" href="__PUBLIC__/css/global.css" media="all">
 		<link rel="stylesheet" href="__PUBLIC__/plugins/font-awesome/css/font-awesome.min.css">
@@ -13,36 +13,36 @@
 		<div class="admin-main">
 		
 			<blockquote class="layui-elem-quote">
-				<button  class="layui-btn layui-btn-small add">
-					<i class="layui-icon">&#xe608;</i> 添加教室
+				<button  data="0" class="layui-btn layui-btn-small add">
+					<i class="layui-icon">&#xe608;</i> 添加课程
 				</button>
 			</blockquote>
 			<fieldset class="layui-elem-field">
-				<legend>教室列表</legend>
+				<legend>课程列表</legend>
 				<div class="layui-field-box">
 				<table class="layui-table">
 					  <thead>
 					    <tr>
 					      <th>#</th>
-					      <th>门牌号</th>
-					      <th>教室名称</th>
-							<th>楼名</th>
-					      <th>操作</th>
+					      <th>课程编号</th>
+					      <th>课程名</th>
+					      <th>学时</th>
+							<th>操作</th>
 					    </tr> 
 					  </thead>
 					  <tbody>
-					  <foreach name="teachingPlace" key="k" item="vo">
-					    <tr>
-					      <td>{$k+1}</td>
-					      <td>{$vo.title}</td>
-					      <td>{$vo.name}</td>
-							<td>{$vo.building_name}</td>
-					      <td>
-							<a data="{$vo.id}" class="layui-btn layui-btn-mini layui-btn-normal edit"><i class="layui-icon">&#xe642;</i>编辑</a>
-							<a  data="{$vo.id}" class="layui-btn layui-btn-danger layui-btn-mini del"><i class="layui-icon">&#xe640;</i>删除</a>
-					      </td>
-					    </tr>
-					    </foreach>
+						<foreach name="curriculum" key="k" item="vo">
+						    <tr>
+						      <td>{$k+1}</td>
+								<td>{$vo.course_id}</td>
+						      <td>{$vo.course_name}</td>
+						      <td>{$vo.period}</td>
+						      <td>
+								<a data="{$vo.id}" class="layui-btn layui-btn-mini layui-btn-normal edit"><i class="layui-icon">&#xe642;</i>编辑</a>
+								<a  data="{$vo.id}" class="layui-btn layui-btn-danger layui-btn-mini del"><i class="layui-icon">&#xe640;</i>删除</a>
+						      </td>
+						    </tr>
+						</foreach>
 					  </tbody>
 				</table>
 			
@@ -61,35 +61,40 @@
 					$ = layui.jquery
 					//请求表单
 				 $('.add').click(function(){
-					var url = "{:U('TeachingPlace/add')}";
-					$.get(url,function(data){
+					var id = $(this).attr('data');
+					var url = "{:U('Curriculum/add')}";
+					$.get(url,{id:id },function(data){
 						if(data.status == 'error'){
 							layer.msg(data.msg,{icon: 5});
 							return;
 						}
+						
 						layer.open({
-							  title:'添加用户',
+							  title:'添加',
 							  type: 1,
 							  skin: 'layui-layer-rim', //加上边框
-							  area: ['500px'], //宽高
+							  area: ['400px','430px'], //宽高
 							  content: data,
 						});
 					})
 				 });
-				//编辑用户
+				
+				//编辑菜单
 				$('.edit').click(function(){
-					var user_id = $(this).attr('data');
-					var url = "{:U('TeachingPlace/edit')}";
-					$.get(url,{user_id:user_id},function(data){
+					var id = $(this).attr('data');
+					var url = "{:U('Curriculum/edit')}";
+					
+					$.get(url,{id:id},function(data){
 						if(data.status == 'error'){
 							layer.msg(data.msg,{icon: 5});
 							return;
 						}
+						
 						layer.open({
-							  title:'编辑用户',
+							  title:'编辑',
 							  type: 1,
 							  skin: 'layui-layer-rim', //加上边框
-							  area: ['500px'], //宽高
+							  area: ['400px','430px'], //宽高
 							  content: data,
 						});
 					})
@@ -98,14 +103,14 @@
 				
 				//删除
 				$('.del').click(function(){
-					var user_id = $(this).attr('data');
-					var url = "{:U('TeachingPlace/delete')}";
+					var id = $(this).attr('data');
+					var url = "{:U('Curriculum/delete')}";
 					layer.confirm('确定删除吗?', {
 						  icon: 3,
 						  skin: 'layer-ext-moon',
 						  btn: ['确认','取消'] //按钮
 						}, function(){
-							$.post(url,{user_id:user_id},function(data){
+							$.post(url,{id:id},function(data){
 								if(data.status == 'error'){
 									  layer.msg(data.msg,{icon: 5});//失败的表情
 									  return;

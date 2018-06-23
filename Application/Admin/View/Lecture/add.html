@@ -1,0 +1,76 @@
+<form class="layui-form">
+  <div class="layui-form-item">
+    <label class="layui-form-label">学年</label>
+    <div class="layui-input-inline">
+      <select name="teaching_year" lay-verify="required">
+        <option value="">请选择学年</option>
+        <foreach name="yearlist" key="k" item="vo">
+          <option value="{$vo}" >{$vo}</option>
+        </foreach>
+      </select>
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">学期</label>
+    <div class="layui-input-inline">
+      <select name="term" lay-verify="required">
+        <option value="">请选择学期</option>
+        <option value="1">第一学期</option>
+        <option value="2">第二学期</option>
+        <option value="3">第三学期</option>
+      </select>
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">课程</label>
+    <div class="layui-input-inline">
+      <select name="course_id" lay-verify="required">
+        <option value="">请选择一个课程</option>
+        <foreach name="courselist" key="k" item="vo">
+          <option value="{$vo.id}" >{$vo.course_id}-{$vo.course_name}</option>
+        </foreach>
+      </select>
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">课程容量</label>
+    <div class="layui-input-inline">
+      <input type="text" name="student_number" lay-verify="required" placeholder="请输入预计授课人数" autocomplete="off"  id="student_number" class="layui-input">
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <div class="layui-input-block">
+      <button class="layui-btn" lay-submit lay-filter="addlecture">立即提交</button>
+      <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+    </div>
+  </div>
+</form>
+<script>
+layui.use('form', function(){
+	var form = layui.form(),
+   		 $ = layui.jquery
+	  //监听提交
+	  form.on('submit(addlecture)', function(data){
+		  
+	    var organization = data.field;
+	    
+		var url = "{:U('Lecture/add')}";
+		$.post(url,organization,function(data){
+			if(data.status == 'error'){
+				  layer.msg(data.msg,{icon: 5});//失败的表情
+				  return;
+			  }else if(data.status == 'success'){
+				  layer.msg(data.msg, {
+					  icon: 6,//成功的表情
+					  time: 2000 //2秒关闭（如果不配置，默认是3秒）
+					}, function(){
+					   location.reload();
+					}); 
+			  }
+		})
+		
+	    return false;//阻止表单跳转
+	  });
+	form.render();
+	});
+</script>

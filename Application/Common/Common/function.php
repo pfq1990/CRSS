@@ -31,6 +31,20 @@ function get_column($array,$type=1,$fid=0,$level=0)
     return $column;
 }
 
+function get_tree_list($array,$fid=0,$level=0)
+{
+    $column = [];
+    foreach($array as $key => $vo){
+        if($vo['pid'] == $fid){
+            //$vo['level'] = $level;
+            unset($vo['pid']);
+            $column[$key] = $vo;
+            $column [$key]['children'] = get_tree_list($array,$vo['id'],$level+1);
+        }
+    }
+
+    return $column;
+}
 
 /**
  * 邮件发送函数

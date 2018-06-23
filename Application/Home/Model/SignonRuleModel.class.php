@@ -58,7 +58,7 @@ class SignonRuleModel extends BaseModel
     }
 
     public function isOnTime($pid){
-        $info=D('CoursePeriod')->getCoursePeriodInfo($pid);
+        $info=D('Home/CoursePeriod')->getCoursePeriodInfo($pid);
         $where=array(
             'oid'=>$info['oid'],
         );
@@ -80,6 +80,18 @@ class SignonRuleModel extends BaseModel
         if ($this_time > $class_end_time+$end_dis)return false;
         if ($this_time < $class_begin_time-$begin_dis)return false;
         return true;
+    }
+
+    public function getSignonRuleList($oid,$num=10){
+        $where['oid']=array('in',$oid);
+        $count      = $this->where($where)->count();
+        $page       = new \Think\Page($count,$num);
+        $show       = $page->show();
+        $join = 'LEFT JOIN crs_organization b ON b.id=a.oid';
+        $field='a.id,a.oid,a.signon_time,a.signout_time,a.distance,b.title';
+        $list = $this->alias('a')->where($where)->field($field)->join($join)->limit($page->firstRow.','.$page->listRows)->select();
+
+        return array('page' => $show , 'list' => $list);
     }
 
 }

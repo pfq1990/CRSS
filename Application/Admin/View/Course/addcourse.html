@@ -1,0 +1,87 @@
+<form class="layui-form">
+  <div class="layui-form-item">
+    <label class="layui-form-label">开始周</label>
+    <div class="layui-input-inline">
+        <input type="text" name="begin"  lay-verify="required" placeholder="请输入开始周次" autocomplete="off"  id="begin" class="layui-input">
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">结束周</label>
+    <div class="layui-input-inline">
+      <input type="text" name="end"  lay-verify="required" placeholder="请输入开始周次" autocomplete="off"  id="end" class="layui-input">
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">星期</label>
+    <div class="layui-input-inline">
+      <select name="week" lay-verify="required">
+        <option value="">请选择星期</option>
+        <option value="1" >一</option>
+        <option value="2" >二</option>
+        <option value="3" >三</option>
+        <option value="4" >四</option>
+        <option value="5" >五</option>
+        <option value="6" >六</option>
+        <option value="7" >日</option>
+      </select>
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">上课时间</label>
+    <div class="layui-input-inline">
+      <select name="time" lay-verify="required">
+        <option value="">请选择一个时间段</option>
+        <foreach name="timetable" key="k" item="vo">
+          <option value="{$vo.id}"  >{$vo.title}</option>
+        </foreach>
+      </select>
+    </div>
+  </div>
+  <div class="layui-form-item">
+    <label class="layui-form-label">上课地点</label>
+    <div class="layui-input-inline">
+      <select name="room" lay-verify="required">
+        <option value="">请选择一间教室</option>
+        <foreach name="teachingplace" key="k" item="vo">
+          <option value="{$vo.id}"  >{$vo.building_name}-{$vo.title}</option>
+        </foreach>
+      </select>
+    </div>
+  </div>
+  <input type="hidden" name="cid" value="{$iid}">
+  <div class="layui-form-item">
+    <div class="layui-input-block">
+      <button class="layui-btn" lay-submit lay-filter="addcourse">立即提交</button>
+      <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+    </div>
+  </div>
+</form>
+<script>
+layui.use('form', function(){
+	var form = layui.form(),
+   		 $ = layui.jquery
+	  //监听提交
+	  form.on('submit(addcourse)', function(data){
+		  
+	    var curriculum = data.field;
+	    
+		var url = "{:U('Course/addcourse')}";
+		$.post(url,curriculum,function(data){
+			if(data.status == 'error'){
+				  layer.msg(data.msg,{icon: 5});//失败的表情
+				  return;
+			  }else if(data.status == 'success'){
+				  layer.msg(data.msg, {
+					  icon: 6,//成功的表情
+					  time: 2000 //2秒关闭（如果不配置，默认是3秒）
+					}, function(){
+					   location.reload();
+					}); 
+			  }
+		})
+
+	    return false;//阻止表单跳转
+	  });
+    form.render();
+	});
+</script>

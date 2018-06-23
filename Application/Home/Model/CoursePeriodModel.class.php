@@ -17,6 +17,21 @@ class CoursePeriodModel extends BaseModel
 
     protected $tableName="crs_course_period";
 
+    public function getCoursePeriodList($iid,$num=10){
+        $where = array(
+            'course_id' => $iid,
+        );
+        $count      = $this->where($where)->count();
+        $page       = new \Think\Page($count,$num);
+        $show       = $page->show();
+        $where='a.course_id='.$iid;
+        $table='crs_course_period a,crs_instruction b ,crs_curriculum c,crs_teaching_place d,crs_time_table e,crs_user_info f';
+        $where.=' and a.course_id=b.id and b.course_id=c.id and a.class_room=d.id and a.ttid=e.id and b.teacher_id=f.user_id';
+        $field='a.id,c.course_id,a.teaching_week,a.week,c.course_name,d.title as class_room,d.row_number as row ,d.col_number as col ,d.longitude,d.latitude,e.title as time ,f.name as teacher,e.period';
+        $list= $this->table($table)->where($where)->order('a.teaching_week asc,a.week asc,a.ttid asc ')->field($field)->limit($page->firstRow.','.$page->listRows)->select();
+        return array('page' => $show , 'list' => $list);
+    }
+
     public function getCoursePeriodModelByIId($iid){
         $where='a.course_id='.$iid;
         $table='crs_course_period a,crs_instruction b ,crs_curriculum c,crs_teaching_place d,crs_time_table e,crs_user_info f';
@@ -38,7 +53,7 @@ class CoursePeriodModel extends BaseModel
     public function getCoursePeriodInfo($id){
         $where=array('id'=>$id);
         $minfo=$this->where($where)->find();
-        $info=D('Instruction')->getCourseId($minfo['course_id']);
+        $info=D('Home/Instruction')->getCourseId($minfo['course_id']);
         $unit=D('Admin/Curriculum')->getUnit($info);
         $oid=D('Admin/Organization')->getRootOid($unit);
         $rinfo=D('Admin/TeachingPlace')->getItem($minfo['class_room']);
@@ -87,7 +102,8 @@ class CoursePeriodModel extends BaseModel
     }
 
     public function getInstructionByCId($pid){
-        $info=$this->field('course_id,teaching_week,week')->find($pid);
+        $where=array('id'=>$pid);
+        $info=$this->field('course_id,teaching_week,week')->where($where)->find();
         return $info;
     }
 

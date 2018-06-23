@@ -47,7 +47,9 @@ class LoginController extends Controller
         }
         $auth_info=$admin_auth_group_access->getUserGroup($user_info['id'],$gid);
         if(!$auth_info){
-            $this->ajaxReturn(array('status'=>1,'msg'=>'该版本客户端不支持该角色用户！'));
+            if($admin_auth_group_access->where('uid='.$user_info['id'])->find()){
+                $this->ajaxReturn(array('status'=>1,'msg'=>'该版本客户端不支持该角色用户！'));
+            }
         }
         $admin_user_model->updateLoginTime($user_info['id']);
         /*$gid=array();

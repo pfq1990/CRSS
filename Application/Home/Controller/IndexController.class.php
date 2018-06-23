@@ -3,7 +3,6 @@ namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
     public function index(){
-		$data=D('Home/CrsDictionaryDataItem')->select();
-		$this->ajaxReturn($data);
+        $this->success('跳转成功', '__APP__/Admin/Index/index');
     }
 }

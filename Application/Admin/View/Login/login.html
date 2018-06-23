@@ -41,8 +41,8 @@
 							<button class="layui-btn  layui-btn-big login" onclick="return false;">
 							<i class="layui-icon">&#xe616;</i>&nbsp;&nbsp;登录</button>
 							
-							<button class="layui-btn layui-btn-big layui-btn-primary register" onclick="return false;">
-							<i class="layui-icon">&#xe608;</i>&nbsp;&nbsp;注册</button>
+							<button type="reset" class="layui-btn layui-btn-big layui-btn-primary">
+							<i class="layui-icon">&#xe608;</i>&nbsp;&nbsp;重置</button>
 						
 						<!-- <div class="beg-clear"></div> -->
 					</div>
@@ -83,9 +83,7 @@
 							}
 						})
 					})
-					$('.register').click(function(){
-						window.location.href="{:U('Register/index')}";
-					})
+
 			});
 			
 			

@@ -33,4 +33,16 @@ class TeachingPlaceController extends CommonController
         $this->display();
     }
 
+    public function delete(){
+        $id = I('post.id','','intval');
+
+        $result = $this->teachingPlace_model->delete($id);
+
+        if($result){
+            $this->ajaxSuccess("删除成功");
+        }else{
+            $this->ajaxError("删除失败");
+        }
+    }
+
 }

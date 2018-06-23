@@ -34,5 +34,29 @@ class StudentPeriodModel extends BaseModel
         return $data;
     }
 
+    public function getStudentPeriod($period_id,$num=10){
+        $where=array(
+            'period_id'=>$period_id
+        );
+        $count      = $this->where($where)->count();
+        $page       = new \Think\Page($count,$num);
+        $show       = $page->show();
+        $join = 'LEFT JOIN crs_user_info b ON b.user_id=a.student_id';
+
+        $where=array(
+            'a.period_id'=>$period_id
+        );
+        $field='a.id,b.number,b.name,a.signon,a.signout,a.x,a.y';
+        $data=$this->alias('a')->where($where)->field($field)->join($join)->limit($page->firstRow.','.$page->listRows)->select();
+        $info=D('Home/CoursePeriod')->getInstructionByCId($period_id);
+        $is_one=D('Home/Instruction')->isOnThisTerm($info['course_id']);
+        $is_two=D('Home/SignonRule')->isOnTime($period_id);
+        $is_delete=($is_one && $is_two);
+        foreach ($data as $key => $value){
+            $data[$key]['is_delete']=$is_delete;
+        }
+        return array('page' => $show , 'list' => $data);
+    }
+
 
 }

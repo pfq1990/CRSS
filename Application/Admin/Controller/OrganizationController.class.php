@@ -63,8 +63,49 @@ class OrganizationController extends CommonController
 
     }
 
-    public function edit(){}
+    public function edit(){
+        if(IS_POST){
+            $data = I('post.');
 
-    public function delete(){}
+
+            if($this->organization_model->isExistOrg($data['title'], $data['pid'],$data['id'])){
+                $this->ajaxerror("该组织已存在");
+            }
+
+            $result = $this->organization_model->editOrganization($data);
+            if($result !== false){
+                $this->ajaxSuccess('更新成功');
+            }else{
+                $this->ajaxError('更新失败');
+            }
+        }else{
+            $id = I('get.id','','intval');
+
+            $organization_info = $this->organization_model->getOrganizationById($id);
+
+            $this->assign('organization',$organization_info);
+            $this->display();
+        }
+    }
+
+    public function delete(){
+        $id = I('post.id','','intval');
+
+        if($this->organization_model->isExistSonOrg($id)){
+            $this->ajaxError('存在子项未删除');
+        }
+
+        if(!$this->organization_model->deleteOrg($id)){
+            $this->ajaxError('删除失败');
+        }else{
+            $this->ajaxSuccess('删除成功');
+        }
+    }
+
+    public function getAllOrg(){
+        $organization=D('Organization')->field('id,title as name,pid')->select();
+        $organization=get_tree_list($organization);
+        $this->ajaxReturn($organization);
+    }
 
 }

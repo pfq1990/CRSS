@@ -38,7 +38,7 @@ class CurriculumController extends CommonController
                 }
                 $oidstr.=$info;
             }
-            $curriculum_info=$this->curriculum_model->getUserCurriculum($oidstr);
+            $curriculum_info=$this->curriculum_model->getUserCurriculumList($oidstr);
             $this->ajaxReturn(array('status'=>0,'msg'=>'查询成功！','data'=>$curriculum_info));
         }
     }

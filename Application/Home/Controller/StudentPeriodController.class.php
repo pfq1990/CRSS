@@ -160,7 +160,11 @@ class StudentPeriodController extends CommonController
             if($finddata['signout'])
                 $this->ajaxReturn(array('status'=>1,'msg'=>'您已经签退！'));
         }
-        $info=$this->student_period_model->where($where)->save($data);
+        /*$where=array(
+            'id'=>$data['id']
+        );*/
+        $saveData=array('signout'=>$data['signout']);
+        $info=$this->student_period_model->where($where)->save($saveData);
         if ($info){
             $this->ajaxReturn(array('status'=>0,'msg'=>'签退成功！','data'=>$info));
         }else{

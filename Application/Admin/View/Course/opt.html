@@ -37,7 +37,8 @@
 								<th>{$vo.x}</th>
 								<th>{$vo.y}</th>
 						      <td>
-								  <if condition="$vo['isdelete']">
+								  {$vo.isdelete}
+								  <if condition="$vo['is_delete']">
 								  <a  data="{$vo.id}" class="layui-btn layui-btn-danger layui-btn-mini del"><i class="layui-icon">&#xe640;</i>清空位置</a>
 								  </if>
 						      </td>

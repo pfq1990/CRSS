@@ -6,12 +6,12 @@
  * Time: 21:02
  */
 
-namespace Admin\Controller;
+namespace Home\Controller;
 
 
 use Think\Controller;
 
-class ClientMenuController extends Controller
+class ClientMenuController extends CommonController
 {
 
     public function getMenusClient()

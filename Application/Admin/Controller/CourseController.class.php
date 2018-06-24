@@ -80,7 +80,7 @@ class CourseController extends CommonController
         if(IS_POST){
             $id = I('post.id','','intval');
 
-            $result = $this->student_model->delete($id);
+            $result = $this->student_model->where('id='.$id)->delete();
 
             if($result){
                 $this->ajaxSuccess("删除成功");
